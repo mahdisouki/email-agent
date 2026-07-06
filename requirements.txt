@@ -1,0 +1,5 @@
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+groq>=0.11.0,<2  # disabled — using Ollama /api/generate instead
+python-dotenv>=1.0.0
+pydantic>=2.0.0
