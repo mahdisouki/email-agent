@@ -1,0 +1,3152 @@
+{
+  "Adhesives and Sealants": [
+    {
+      "_id": "672fa7252c5031d7c0b689d3",
+      "itemName": "Adhesives and Sealants",
+      "price": 2,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "08 04 09",
+      "spaceOfVan": 1000,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 5,
+      "description": "Any size",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761088124/uploads/1761088123997-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2881%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392aa93283f0d04b410bda"
+      ],
+      "purchasedCount": 5,
+      "timesPurchased": 2
+    }
+  ],
+  "Armchair": [
+    {
+      "_id": "672fa0722c5031d7c0b6898e",
+      "itemName": "Armchair",
+      "price": 50,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 20,
+      "timespentOutside": 5,
+      "timespentInside": 15,
+      "timespentInsdiewithDis": 30,
+      "description": "Armchair removal",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760963164/uploads/1760963163420-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2858%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392af73283f0d04b410be0",
+        "67392a4b3283f0d04b410bd4"
+      ],
+      "purchasedCount": 19,
+      "timesPurchased": 19
+    }
+  ],
+  "Bathtub": [
+    {
+      "_id": "672fc9b52c5031d7c0b68aa6",
+      "itemName": "Bathtub",
+      "price": 50,
+      "insidePrice": 20,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "17 01 03",
+      "spaceOfVan": 20,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Max. weight 20kg. Max. width 70cm. <br/> Must be disconnected and fully drained.",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761162151/uploads/1761162150785-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20-%202025-10-22T204226.120.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 0,
+      "timesPurchased": 0
+    }
+  ],
+  "Battery": [
+    {
+      "_id": "672fa2e92c5031d7c0b689a6",
+      "itemName": "Car Battery",
+      "price": 25,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 33",
+      "spaceOfVan": 600,
+      "timespentOutside": 1,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 5,
+      "description": "Car battery removal",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760965920/uploads/1760965906723-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2867%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392adc3283f0d04b410bde",
+        "67392aa93283f0d04b410bda",
+        "67392a063283f0d04b410bd0"
+      ],
+      "purchasedCount": 0,
+      "timesPurchased": 0
+    },
+    {
+      "_id": "672fa3282c5031d7c0b689a9",
+      "itemName": "Phone Shop Battery Collection",
+      "price": 100,
+      "insidePrice": 100,
+      "insideWithDismantlingPrice": null,
+      "isHidden": true,
+      "Objectsposition": null,
+      "ewcCode": "20 01 33",
+      "spaceOfVan": 100,
+      "timespentOutside": 0,
+      "timespentInside": 0,
+      "timespentInsdiewithDis": 0,
+      "description": "30 Litre secure drum   ",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760966284/uploads/1760966283267-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2868%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392adc3283f0d04b410bde",
+        "67392aa93283f0d04b410bda",
+        "67392a063283f0d04b410bd0"
+      ],
+      "purchasedCount": 0,
+      "timesPurchased": 0
+    }
+  ],
+  "Bbq": [
+    {
+      "_id": "672fb0772c5031d7c0b68a0c",
+      "itemName": "BBQ – Large",
+      "price": 75,
+      "insidePrice": null,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 20,
+      "timespentOutside": 10,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": "We cannot remove the gas canister.",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760910566/uploads/1760910565964-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%286%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a6d3283f0d04b410bd6",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 3,
+      "timesPurchased": 3
+    },
+    {
+      "_id": "672fb09d2c5031d7c0b68a0f",
+      "itemName": "BBQ – Small",
+      "price": 25,
+      "insidePrice": null,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 100,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Small Barbecue. <br/> Our recycling service handles small barbecues throughout Greater London. ",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760910818/uploads/1760910817945-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%287%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a6d3283f0d04b410bd6",
+        "67392a063283f0d04b410bd0",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 1,
+      "timesPurchased": 1
+    }
+  ],
+  "Bed": [
+    {
+      "_id": "672fa4502c5031d7c0b689b2",
+      "itemName": "Double Bed Base (Divan)",
+      "price": 35,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 30,
+      "timespentOutside": 5,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": null,
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760966908/uploads/1760966905980-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2870%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392ac53283f0d04b410bdc",
+        "67392a4b3283f0d04b410bd4"
+      ],
+      "purchasedCount": 52,
+      "timesPurchased": 50
+    },
+    {
+      "_id": "672fa4a12c5031d7c0b689b5",
+      "itemName": "Double Bed Frame",
+      "price": 25,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 50,
+      "timespentOutside": 10,
+      "timespentInside": 30,
+      "timespentInsdiewithDis": 40,
+      "description": null,
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760988334/uploads/1760988333134-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2872%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392ac53283f0d04b410bdc",
+        "67392a4b3283f0d04b410bd4"
+      ],
+      "purchasedCount": 95,
+      "timesPurchased": 92
+    },
+    {
+      "_id": "672fa5412c5031d7c0b689be",
+      "itemName": "King / Queen Bed Base (Divan)",
+      "price": 45,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 15,
+      "timespentOutside": 5,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": null,
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760989620/uploads/1760989619417-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2875%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392ac53283f0d04b410bdc",
+        "67392a4b3283f0d04b410bd4"
+      ],
+      "purchasedCount": 21,
+      "timesPurchased": 20
+    },
+    {
+      "_id": "672fa5612c5031d7c0b689c1",
+      "itemName": "King / Queen Bed Frame",
+      "price": 35,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 50,
+      "timespentOutside": 10,
+      "timespentInside": 30,
+      "timespentInsdiewithDis": 40,
+      "description": "If the mattress is infested, you will be required to wrap it in plastic and leave it outside 3 days prior to collection. You may also be subject to additional charges. Please inform us prior to booking.",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760990112/uploads/1760990111597-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2876%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392ac53283f0d04b410bdc",
+        "67392a4b3283f0d04b410bd4"
+      ],
+      "purchasedCount": 47,
+      "timesPurchased": 47
+    },
+    {
+      "_id": "672fa6102c5031d7c0b689ca",
+      "itemName": "Single Bed Base (Divan)",
+      "price": 30,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 50,
+      "timespentOutside": 10,
+      "timespentInside": 30,
+      "timespentInsdiewithDis": 40,
+      "description": null,
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761086667/uploads/1761086665702-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2878%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392ac53283f0d04b410bdc",
+        "67392a4b3283f0d04b410bd4"
+      ],
+      "purchasedCount": 14,
+      "timesPurchased": 13
+    },
+    {
+      "_id": "672fa62e2c5031d7c0b689cd",
+      "itemName": "Single Bed Frame",
+      "price": 20,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 50,
+      "timespentOutside": 10,
+      "timespentInside": 30,
+      "timespentInsdiewithDis": 40,
+      "description": null,
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761087213/uploads/1761087212325-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2879%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392ac53283f0d04b410bdc",
+        "67392a4b3283f0d04b410bd4"
+      ],
+      "purchasedCount": 15,
+      "timesPurchased": 14
+    }
+  ],
+  "Bedding": [
+    {
+      "_id": "672fa3a62c5031d7c0b689ac",
+      "itemName": "Bedding",
+      "price": 15,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 100,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Max. 3 bin liners worth of duvets, pillows, and sheets",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761168036/uploads/1761168035432-king%20q%20%285%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392ac53283f0d04b410bdc"
+      ],
+      "purchasedCount": 29,
+      "timesPurchased": 19
+    }
+  ],
+  "Bike": [
+    {
+      "_id": "672fb0c02c5031d7c0b68a12",
+      "itemName": "Bike",
+      "price": 10,
+      "insidePrice": 5,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 20,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Bike removal <br/> - same day collection across every London borough. <br/> Book bike waste removal London today.",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760917596/uploads/1760917595408-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2827%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a6d3283f0d04b410bd6",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 6,
+      "timesPurchased": 5
+    },
+    {
+      "_id": "672fc5bc2c5031d7c0b68a73",
+      "itemName": "Exercise bike",
+      "price": 75,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 36",
+      "spaceOfVan": 20,
+      "timespentOutside": 10,
+      "timespentInside": 20,
+      "timespentInsdiewithDis": 40,
+      "description": "Exercise bike removal  <br/> - We're London's most trusted waste clearance provider for gym equipment. ",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760911481/uploads/1760911480436-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2811%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a063283f0d04b410bd0",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 3,
+      "timesPurchased": 3
+    }
+  ],
+  "Bin": [
+    {
+      "_id": "672fa9652c5031d7c0b689e5",
+      "itemName": "1100 Litre Bin",
+      "price": 80,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 01",
+      "spaceOfVan": 13,
+      "timespentOutside": 10,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": "– Max. weight 200kg  <br/>  – No Garden or Construction Waste",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761135606/uploads/1761135605666-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2890%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a873283f0d04b410bd8"
+      ],
+      "purchasedCount": 17,
+      "timesPurchased": 13
+    },
+    {
+      "_id": "672fa9c62c5031d7c0b689eb",
+      "itemName": "660 Litre Bin",
+      "price": 50,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 01",
+      "spaceOfVan": 15,
+      "timespentOutside": 15,
+      "timespentInside": 20,
+      "timespentInsdiewithDis": 20,
+      "description": " Max. weight 100kg. <br/> No Garden or Construction Waste. <br/> same day collection across all London areas.",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761136063/uploads/1761136062728-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2891%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a873283f0d04b410bd8"
+      ],
+      "purchasedCount": 12,
+      "timesPurchased": 12
+    },
+    {
+      "_id": "672faae52c5031d7c0b689fa",
+      "itemName": "Household Wheelie Bin",
+      "price": 30,
+      "insidePrice": 5,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 01",
+      "spaceOfVan": 30,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "– Household general waste only <br/>  – No Garden or Construction Waste",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761137228/uploads/1761137227897-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2894%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a873283f0d04b410bd8"
+      ],
+      "purchasedCount": 49,
+      "timesPurchased": 26
+    }
+  ],
+  "Bookshelf": [
+    {
+      "_id": "672fb6d72c5031d7c0b68a3c",
+      "itemName": "Bookshelf *LARGE SIZE*",
+      "price": 55,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 50,
+      "timespentOutside": 10,
+      "timespentInside": 20,
+      "timespentInsdiewithDis": 40,
+      "description": "Width 60cm or wider",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761159797/uploads/1761159793984-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20-%202025-10-22T200044.752.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a4b3283f0d04b410bd4",
+        "67392b123283f0d04b410be2"
+      ],
+      "purchasedCount": 9,
+      "timesPurchased": 6
+    },
+    {
+      "_id": "672fb6fd2c5031d7c0b68a3f",
+      "itemName": "Bookshelf *SMALL SIZE*",
+      "price": 20,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 100,
+      "timespentOutside": 5,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": "-Max. width 60cm <br/>-  Max. height 6ft",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761159815/uploads/1761159814732-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20-%202025-10-22T200304.432.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a4b3283f0d04b410bd4",
+        "67392b123283f0d04b410be2"
+      ],
+      "purchasedCount": 30,
+      "timesPurchased": 23
+    }
+  ],
+  "Box": [
+    {
+      "_id": "672fa9fa2c5031d7c0b689ee",
+      "itemName": "Cardboard Box (empty and flattened)",
+      "price": 2,
+      "insidePrice": 1,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "15 01 01",
+      "spaceOfVan": 200,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Adjust quantity accordingly",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761135416/uploads/1761135415588-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2889%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a873283f0d04b410bd8"
+      ],
+      "purchasedCount": 300,
+      "timesPurchased": 36
+    },
+    {
+      "_id": "672fc5972c5031d7c0b68a70",
+      "itemName": "DVD Players / Sky Box",
+      "price": 10,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 36",
+      "spaceOfVan": 1000,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": null,
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760918639/uploads/1760918638950-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2831%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a063283f0d04b410bd0",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 1,
+      "timesPurchased": 1
+    }
+  ],
+  "Bricks": [
+    {
+      "_id": "672fca452c5031d7c0b68aac",
+      "itemName": "Bricks",
+      "price": 2,
+      "insidePrice": 3,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "17 01 02",
+      "spaceOfVan": 300,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Price per brick (adjust quantity accordingly).",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761162586/uploads/1761162585186-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20-%202025-10-22T204917.636.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 0,
+      "timesPurchased": 0
+    }
+  ],
+  "Cabinet": [
+    {
+      "_id": "672f9e902c5031d7c0b68970",
+      "itemName": "Filing Cabinet (Small)",
+      "price": 50,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 40",
+      "spaceOfVan": 200,
+      "timespentOutside": 5,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": "-Up to waist height  <br/> -Office furniture <br/> -Metal cabinet",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760958670/uploads/1760958670102-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2847%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392b123283f0d04b410be2",
+        "67392a4b3283f0d04b410bd4"
+      ],
+      "purchasedCount": 6,
+      "timesPurchased": 5
+    },
+    {
+      "_id": "672f9ec12c5031d7c0b68973",
+      "itemName": "Filling Cabinet (Tall)",
+      "price": 75,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 40",
+      "spaceOfVan": 75,
+      "timespentOutside": 5,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": "-Bigger than waist height <br/> -Office furniture <br/> -Metal cabinet",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760958843/uploads/1760958842687-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2848%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392b123283f0d04b410be2",
+        "67392a4b3283f0d04b410bd4"
+      ],
+      "purchasedCount": 2,
+      "timesPurchased": 2
+    }
+  ],
+  "Carpet / Rug": [
+    {
+      "_id": "672fca872c5031d7c0b68aaf",
+      "itemName": "Carpet / Rug",
+      "price": 5,
+      "insidePrice": 5,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 11",
+      "spaceOfVan": 200,
+      "timespentOutside": 5,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 15,
+      "description": "– This service is also for Rugs <br/>  – Price per square metre (adjust quantity accordingly)",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761162781/uploads/1761162780995-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20-%202025-10-22T205241.344.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 48,
+      "timesPurchased": 18
+    }
+  ],
+  "Chest": [
+    {
+      "_id": "672fbd0e2c5031d7c0b68a51",
+      "itemName": "Chest Freezer",
+      "price": 80,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 36",
+      "spaceOfVan": 20,
+      "timespentOutside": 10,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": "-Household only, NOT commercial <br/> -Your appliance must be disconnected and drained completely before collection. <br/> -This item must be outside the property ready for collection if this is not possible we may be able to remove from inside but bear no responsibility for any damage that may occur during the removal due to the significant weight and size of the freezer",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760911291/uploads/1760911290795-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2810%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a2e3283f0d04b410bd2",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 0,
+      "timesPurchased": 0
+    },
+    {
+      "_id": "672fb7252c5031d7c0b68a42",
+      "itemName": "Chest of Drawers",
+      "price": 20,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 300,
+      "timespentOutside": 10,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": null,
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1762424645/uploads/1762424644540-king%20q.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a4b3283f0d04b410bd4",
+        "67392b123283f0d04b410be2"
+      ],
+      "purchasedCount": 53,
+      "timesPurchased": 50
+    }
+  ],
+  "Coffee": [
+    {
+      "_id": "672fc4972c5031d7c0b68a67",
+      "itemName": "Coffee Machine – Medium",
+      "price": 50,
+      "insidePrice": 5,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 36",
+      "spaceOfVan": 100,
+      "timespentOutside": 5,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": "Medium coffee machine removal London.",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760918479/uploads/1760918479332-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2830%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a063283f0d04b410bd0",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 4,
+      "timesPurchased": 4
+    },
+    {
+      "_id": "672fc4742c5031d7c0b68a64",
+      "itemName": "Coffee Machine – Small",
+      "price": 25,
+      "insidePrice": 5,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 36",
+      "spaceOfVan": 500,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Small coffee machine removal.  <br/> -Same day removal services available with proper WEEE compliance. ",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760909572/uploads/1760909571390-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%283%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a063283f0d04b410bd0",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 0,
+      "timesPurchased": 0
+    },
+    {
+      "_id": "672f9def2c5031d7c0b68967",
+      "itemName": "Coffee Table",
+      "price": 20,
+      "insidePrice": 6,
+      "insideWithDismantlingPrice": 18,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 75,
+      "timespentOutside": 5,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": null,
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761664143/uploads/1761664140340-king%20q.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392b123283f0d04b410be2",
+        "67392a4b3283f0d04b410bd4",
+        "67392af73283f0d04b410be0"
+      ],
+      "purchasedCount": 15,
+      "timesPurchased": 15
+    }
+  ],
+  "Computer": [
+    {
+      "_id": "672fc52a2c5031d7c0b68a6a",
+      "itemName": "Computer",
+      "price": 10,
+      "insidePrice": 5,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "21 01 36",
+      "spaceOfVan": 1000,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "– Does NOT include the monitor or keyboard and mouse  <br/> – Please book these items in addition if required",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1762348908/uploads/1762348907689-Compuer.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a063283f0d04b410bd0",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 1,
+      "timesPurchased": 1
+    }
+  ],
+  "Concrete Slabs / Posts": [
+    {
+      "_id": "672fb0f82c5031d7c0b68a15",
+      "itemName": "Concrete Slabs / Posts",
+      "price": 10,
+      "insidePrice": 5,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "17 01 01",
+      "spaceOfVan": 100,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "– Average weight 10–15kg <br/> – Price per slab (adjust quantity accordingly)",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761139868/uploads/1761139866473-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2898%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a6d3283f0d04b410bd6",
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 10,
+      "timesPurchased": 1
+    }
+  ],
+  "Cooker": [
+    {
+      "_id": "672fd0cd2c5031d7c0b68aeb",
+      "itemName": "Cooker / Oven",
+      "price": 45,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 36",
+      "spaceOfVan": 30,
+      "timespentOutside": 10,
+      "timespentInside": 20,
+      "timespentInsdiewithDis": 20,
+      "description": "Your appliance must be disconnected before collection.",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760919304/uploads/1760919303645-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2834%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "673928fe3283f0d04b410bcc",
+        "67392a063283f0d04b410bd0"
+      ],
+      "purchasedCount": 11,
+      "timesPurchased": 10
+    },
+    {
+      "_id": "672fd17c2c5031d7c0b68af1",
+      "itemName": "Double Cooker / Oven",
+      "price": 90,
+      "insidePrice": 20,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 36",
+      "spaceOfVan": 10,
+      "timespentOutside": 10,
+      "timespentInside": 30,
+      "timespentInsdiewithDis": 40,
+      "description": "– A cooker with 5 or more hobs <br/>  – Your appliance must be disconnected before collection <br/>  – This item must be outside the property ready for collection if this is not possible, we may be able to remove from inside but bear no responsibility for any damage that may occur during the removal due to the significant weight and size of the item",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760919433/uploads/1760919432748-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2835%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "673928fe3283f0d04b410bcc",
+        "67392a063283f0d04b410bd0"
+      ],
+      "purchasedCount": 3,
+      "timesPurchased": 3
+    }
+  ],
+  "Cot": [
+    {
+      "_id": "672fa3f22c5031d7c0b689af",
+      "itemName": "Cot",
+      "price": 45,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 50,
+      "timespentOutside": 5,
+      "timespentInside": 15,
+      "timespentInsdiewithDis": 30,
+      "description": "Includes baby mattress. <br/> baby furniture disposal across all 32 London boroughs. ",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760966740/uploads/1760966737912-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2869%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392ac53283f0d04b410bdc",
+        "67392a4b3283f0d04b410bd4"
+      ],
+      "purchasedCount": 4,
+      "timesPurchased": 4
+    }
+  ],
+  "Cross Trainer": [
+    {
+      "_id": "672fc5672c5031d7c0b68a6d",
+      "itemName": "Cross Trainer",
+      "price": 75,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 36",
+      "spaceOfVan": 20,
+      "timespentOutside": 10,
+      "timespentInside": 20,
+      "timespentInsdiewithDis": 40,
+      "description": "Cross trainer removal London <br/> - same-day collection across all 32 London boroughs. Our appliance recycling London service handles all cross trainers.",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760913955/uploads/1760913955361-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2819%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a063283f0d04b410bd0",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 1,
+      "timesPurchased": 1
+    }
+  ],
+  "Cushions or Pillows": [
+    {
+      "_id": "672fa0d52c5031d7c0b68994",
+      "itemName": "Cushions or Pillows",
+      "price": 1.5,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 11",
+      "spaceOfVan": 600,
+      "timespentOutside": 1,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Cushion removal ",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760963925/uploads/1760963923860-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2860%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392af73283f0d04b410be0",
+        "67392ac53283f0d04b410bdc",
+        "67392a4b3283f0d04b410bd4"
+      ],
+      "purchasedCount": 31,
+      "timesPurchased": 11
+    }
+  ],
+  "Dining": [
+    {
+      "_id": "672f9d182c5031d7c0b6895e",
+      "itemName": "Dining Chair",
+      "price": 7.5,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": 2.5,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 100,
+      "timespentOutside": 1,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": " Dining Chairs removal",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1764156624/uploads/1764156623336-Dining%20Chair.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392b123283f0d04b410be2",
+        "67392af73283f0d04b410be0",
+        "67392a4b3283f0d04b410bd4"
+      ],
+      "purchasedCount": 189,
+      "timesPurchased": 51
+    },
+    {
+      "_id": "672f9e362c5031d7c0b6896a",
+      "itemName": "Dining Table",
+      "price": 35,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 50,
+      "timespentOutside": 5,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": "If your table weighs OVER 30kg please contact us for a custom quote",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761665119/uploads/1761665115561-king%20q%20%281%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392b123283f0d04b410be2"
+      ],
+      "purchasedCount": 31,
+      "timesPurchased": 22
+    }
+  ],
+  "Dishwasher": [
+    {
+      "_id": "672fd1472c5031d7c0b68aee",
+      "itemName": "Dishwasher",
+      "price": 35,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 36",
+      "spaceOfVan": 30,
+      "timespentOutside": 10,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": "Your appliance must be disconnected and drained completely before collection.",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760912356/uploads/1760912355300-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2815%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "673928fe3283f0d04b410bcc",
+        "67392a063283f0d04b410bd0"
+      ],
+      "purchasedCount": 18,
+      "timesPurchased": 18
+    }
+  ],
+  "Door": [
+    {
+      "_id": "672fcb3b2c5031d7c0b68ab5",
+      "itemName": "External Door",
+      "price": 50,
+      "insidePrice": 5,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "17 01 01",
+      "spaceOfVan": 50,
+      "timespentOutside": 10,
+      "timespentInside": 20,
+      "timespentInsdiewithDis": 40,
+      "description": null,
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761163437/uploads/1761163436993-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20-%202025-10-22T210341.064.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "673929e13283f0d04b410bce",
+        "67392b123283f0d04b410be2"
+      ],
+      "purchasedCount": 1,
+      "timesPurchased": 1
+    }
+  ],
+  "Fan": [
+    {
+      "_id": "672fb8992c5031d7c0b68a45",
+      "itemName": "Fan",
+      "price": 15,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 36",
+      "spaceOfVan": 500,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Fan waste management with appliance recycling. <br/> Same-day waste removal available with proper WEEE recycling. <br/> We're London's most trusted waste clearance provider for appliances. ",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1766528616/uploads/1766528615535-king%20q%20%289%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a063283f0d04b410bd0",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 4,
+      "timesPurchased": 4
+    }
+  ],
+  "Fence Panel": [
+    {
+      "_id": "672fb12f2c5031d7c0b68a18",
+      "itemName": "Fence Panel",
+      "price": 15,
+      "insidePrice": null,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "17 09 04",
+      "spaceOfVan": 60,
+      "timespentOutside": 15,
+      "timespentInside": 30,
+      "timespentInsdiewithDis": 30,
+      "description": "Price per panel.<br/> Must not be broken down otherwise will be charged as a load size. <br/> If you would also like to remove concrete fence posts, please note we would charge an additional fee: <br/> CLICK HERE TO ADD CONCRETE POSTS",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1762425091/uploads/1762425081979-king%20q%20%282%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a6d3283f0d04b410bd6",
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 11,
+      "timesPurchased": 4
+    }
+  ],
+  "Flooring": [
+    {
+      "_id": "672fcb722c5031d7c0b68ab8",
+      "itemName": "Flooring",
+      "price": 1,
+      "insidePrice": 1,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "17 02 03",
+      "spaceOfVan": 300,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Price per plank (adjust quantity accordingly)",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1762345749/uploads/1762345748362-Flooring.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 0,
+      "timesPurchased": 0
+    }
+  ],
+  "Fluorescent Tube": [
+    {
+      "_id": "672fa74b2c5031d7c0b689d6",
+      "itemName": "Fluorescent Tube",
+      "price": 10,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 21*",
+      "spaceOfVan": 1000,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": " Price per tube/bulb (adjust quantity accordingly) <br/> - specialised hazardous waste service. ",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761166497/uploads/1761166496599-king%20q%20%282%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392aa93283f0d04b410bda",
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 0,
+      "timesPurchased": 0
+    }
+  ],
+  "Footstool": [
+    {
+      "_id": "672fa1582c5031d7c0b68997",
+      "itemName": "Footstool",
+      "price": 20,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 50,
+      "timespentOutside": 1,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": null,
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760964307/uploads/1760964306850-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2862%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392af73283f0d04b410be0",
+        "67392a4b3283f0d04b410bd4"
+      ],
+      "purchasedCount": 8,
+      "timesPurchased": 7
+    }
+  ],
+  "Fridge": [
+    {
+      "_id": "672fbcdd2c5031d7c0b68a4e",
+      "itemName": "American (Double) Fridge",
+      "price": 120,
+      "insidePrice": null,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "16 02 11*",
+      "spaceOfVan": 10,
+      "timespentOutside": 10,
+      "timespentInside": 20,
+      "timespentInsdiewithDis": 40,
+      "description": "-Your appliance must be disconnected and drained completely before collection. <br/> -The motor must be attached. <br/> -This item must be outside the property ready for collection if this is not possible we may be able to remove from inside but bear no responsibility for any damage that may occur during the removal due to the significant weight and size of the fridge.",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760911075/uploads/1760911075064-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%289%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a2e3283f0d04b410bd2",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 6,
+      "timesPurchased": 6
+    },
+    {
+      "_id": "672fbd432c5031d7c0b68a54",
+      "itemName": "Commercial Fridge",
+      "price": 350,
+      "insidePrice": null,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "16 02 11*",
+      "spaceOfVan": 8,
+      "timespentOutside": 10,
+      "timespentInside": 30,
+      "timespentInsdiewithDis": 40,
+      "description": "Also known as “Display Fridges”  <br/> -Your appliance must be disconnected and drained completely before collection. <br/>  -This item must be outside the property ready for collection if this is not possible we may be able to remove from inside but bear no responsibility for any damage that may occur during the removal due to the significant weight and size of the fridge.",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760918182/uploads/1760918181590-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2828%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a2e3283f0d04b410bd2",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 0,
+      "timesPurchased": 0
+    },
+    {
+      "_id": "672fbda92c5031d7c0b68a57",
+      "itemName": "Mini Fridge",
+      "price": 45,
+      "insidePrice": 5,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "16 02 11*",
+      "spaceOfVan": 75,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "-The motor must be attached. <br/> -The fridge must be disconnected prior to collection.",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1762424936/uploads/1762424933247-king%20q%20%281%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a2e3283f0d04b410bd2",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 6,
+      "timesPurchased": 6
+    },
+    {
+      "_id": "672fc3072c5031d7c0b68a5e",
+      "itemName": "Small Fridge",
+      "price": 50,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 36",
+      "spaceOfVan": 70,
+      "timespentOutside": 5,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": "-Under the counter fridge. <br/> -The motor must be attached. <br/>  -The fridge must be disconnected prior to collection. <br/>  -If your fridge is a display fridge or wine cooler, or has glass doors, please do NOT book this product. <br/> Get in touch via email ( hello@londonwastemanagement.com ) for a specific quote for your item.",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760913750/uploads/1760913749711-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2818%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a2e3283f0d04b410bd2",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 7,
+      "timesPurchased": 7
+    }
+  ],
+  "Garden": [
+    {
+      "_id": "672fa2112c5031d7c0b6899a",
+      "itemName": "Garden Chair",
+      "price": 5,
+      "insidePrice": 5,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 50,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Includes folding and non-folding outdoor chairs",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761665872/uploads/1761665870256-king%20q%20%283%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392af73283f0d04b410be0",
+        "67392a6d3283f0d04b410bd6"
+      ],
+      "purchasedCount": 19,
+      "timesPurchased": 9
+    },
+    {
+      "_id": "672f9ef62c5031d7c0b68976",
+      "itemName": "Garden Table",
+      "price": 15,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 30,
+      "timespentOutside": 5,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": "– Does NOT include parasol <br/>  – Parasol can be added separately",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1762355544/uploads/1762355543423-Sink%20%281%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392b123283f0d04b410be2",
+        "67392a6d3283f0d04b410bd6"
+      ],
+      "purchasedCount": 6,
+      "timesPurchased": 6
+    },
+    {
+      "_id": "672faa852c5031d7c0b689f4",
+      "itemName": "Garden Waste Bag",
+      "price": 20,
+      "insidePrice": null,
+      "insideWithDismantlingPrice": 0,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 02 01",
+      "spaceOfVan": 30,
+      "timespentOutside": 5,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": "Max. weight per bag is 25kg <br/>  Does not include Tonne bags, if unsure email photos to hello@londonwastemanagement.com",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761136504/uploads/1761136503540-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2892%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a873283f0d04b410bd8",
+        "67392a6d3283f0d04b410bd6"
+      ],
+      "purchasedCount": 20,
+      "timesPurchased": 7
+    }
+  ],
+  "Insulation": [
+    {
+      "_id": "672fcbea2c5031d7c0b68abb",
+      "itemName": "Insulation",
+      "price": 10,
+      "insidePrice": 1,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "17 06 04",
+      "spaceOfVan": 120,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "– Max. length of roll 18f <br/> – Price per roll (adjust quantity accordingly)",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760919704/uploads/1760919703329-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2836%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 0,
+      "timesPurchased": 0
+    }
+  ],
+  "Internal": [
+    {
+      "_id": "672fcc202c5031d7c0b68abe",
+      "itemName": "Internal Wooden Door",
+      "price": 10,
+      "insidePrice": 5,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "17 02 01",
+      "spaceOfVan": 50,
+      "timespentOutside": 5,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": "We have a separate option for Fire Doors.",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761163919/uploads/1761163918840-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20-%202025-10-22T211128.406.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 18,
+      "timesPurchased": 7
+    },
+    {
+      "_id": "672fcc462c5031d7c0b68ac1",
+      "itemName": "Internal Wooden Fire Door",
+      "price": 25,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "17 02 01",
+      "spaceOfVan": 50,
+      "timespentOutside": 5,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": "This is for Internal Fire Safety Doors",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760919863/uploads/1760919862981-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2837%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 16,
+      "timesPurchased": 8
+    }
+  ],
+  "Iron": [
+    {
+      "_id": "672fc61c2c5031d7c0b68a76",
+      "itemName": "Iron",
+      "price": 2,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 36",
+      "spaceOfVan": 1000,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": null,
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760914523/uploads/1760914522595-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2820%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a063283f0d04b410bd0",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 7,
+      "timesPurchased": 6
+    }
+  ],
+  "Ironing Board": [
+    {
+      "_id": "672fd2202c5031d7c0b68af4",
+      "itemName": "Ironing Board",
+      "price": 3,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 01",
+      "spaceOfVan": 300,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Ironing board removal <br/> - same-day collection across all 32 London boroughs. ",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760915990/uploads/1760915990059-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2825%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "673928fe3283f0d04b410bcc",
+        "67392b123283f0d04b410be2"
+      ],
+      "purchasedCount": 12,
+      "timesPurchased": 12
+    }
+  ],
+  "Kettle": [
+    {
+      "_id": "672fd23d2c5031d7c0b68af7",
+      "itemName": "Kettle",
+      "price": 2,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 36",
+      "spaceOfVan": 1000,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Kettle removal <br/> -Same-day waste removal available with proper WEEE compliance. ",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760909886/uploads/1760909885935-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%285%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "673928fe3283f0d04b410bcc",
+        "67392a063283f0d04b410bd0"
+      ],
+      "purchasedCount": 11,
+      "timesPurchased": 11
+    }
+  ],
+  "Keyboard and Mouse": [
+    {
+      "_id": "672fc64a2c5031d7c0b68a79",
+      "itemName": "Keyboard and Mouse",
+      "price": 2,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 36",
+      "spaceOfVan": 2000,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Keyboards and Mouse removal with appliance recycling. <br/> Same-day removal available with proper WEEE recycling. ",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761161528/uploads/1761161527570-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20-%202025-10-22T203146.898.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a063283f0d04b410bd0",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 4,
+      "timesPurchased": 4
+    }
+  ],
+  "Lamp": [
+    {
+      "_id": "672f9d632c5031d7c0b68961",
+      "itemName": "Lamp",
+      "price": 5,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 35",
+      "spaceOfVan": 200,
+      "timespentOutside": 1,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 5,
+      "description": "Tall lamps and Desk lamps",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760920717/uploads/1760920716790-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2842%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392b123283f0d04b410be2",
+        "67392a063283f0d04b410bd0"
+      ],
+      "purchasedCount": 16,
+      "timesPurchased": 14
+    }
+  ],
+  "Laptop": [
+    {
+      "_id": "672fc6972c5031d7c0b68a7c",
+      "itemName": "Laptop",
+      "price": 10,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 36",
+      "spaceOfVan": 1000,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Laptop removal ",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760920154/uploads/1760920153449-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2839%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a063283f0d04b410bd0",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 15,
+      "timesPurchased": 7
+    }
+  ],
+  "Lawnmower": [
+    {
+      "_id": "672fb24f2c5031d7c0b68a21",
+      "itemName": "Lawnmower",
+      "price": 10,
+      "insidePrice": 5,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 35",
+      "spaceOfVan": 50,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": null,
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761143630/uploads/1761143629359-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20-%202025-10-22T153353.056.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a6d3283f0d04b410bd6",
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 3,
+      "timesPurchased": 3
+    }
+  ],
+  "Load": [
+    {
+      "_id": "672fa9022c5031d7c0b689df",
+      "itemName": "1/2 Load",
+      "price": 225,
+      "insidePrice": 25,
+      "insideWithDismantlingPrice": 50,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 01",
+      "spaceOfVan": 2,
+      "timespentOutside": 60,
+      "timespentInside": 60,
+      "timespentInsdiewithDis": 60,
+      "description": "Some items like fridges, mattresses, and certain sofas may incur extra recycling fees. Contact us if you have any questions. <br/>  – Half van Load <br/>   – Medium Load <br/>    – Max. weight 500kg <br/>  – Equivalent space to 16 washing machines <br/>   – Includes labour for up to 45 minutes",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1763729403/uploads/1763729402223-king%20q%20%286%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a873283f0d04b410bd8"
+      ],
+      "purchasedCount": 19,
+      "timesPurchased": 19
+    },
+    {
+      "_id": "672fa9332c5031d7c0b689e2",
+      "itemName": "1/4 Load",
+      "price": 127.99,
+      "insidePrice": 25,
+      "insideWithDismantlingPrice": 50,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 01",
+      "spaceOfVan": 4,
+      "timespentOutside": 30,
+      "timespentInside": 30,
+      "timespentInsdiewithDis": 30,
+      "description": "Some items like fridges, mattresses, and certain sofas may incur extra recycling fees. Contact us if you have any questions. <br/>  – Quarter Load <br/>   – Max. weight 250kg  <br/>  – Equivalent space to 8 washing machines <br/>  – Includes labour for 30 minutes",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1763733046/uploads/1763733043298-king%20q%20%287%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a873283f0d04b410bd8"
+      ],
+      "purchasedCount": 82,
+      "timesPurchased": 82
+    },
+    {
+      "_id": "672fa9982c5031d7c0b689e8",
+      "itemName": "3/4 Load",
+      "price": 285,
+      "insidePrice": 25,
+      "insideWithDismantlingPrice": 50,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 01",
+      "spaceOfVan": 1.5,
+      "timespentOutside": 60,
+      "timespentInside": 60,
+      "timespentInsdiewithDis": 60,
+      "description": "Some items like fridges, mattresses, and certain sofas may incur extra recycling fees. Contact us if you have any questions. <br/>  – Three quarter van Load  <br/>   – Max. weight 750kg <br/>   – Equivalent space to 24 washing machines <br/>  – Includes labour for up to 60 minutes",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1763733557/uploads/1763733555999-king%20q%20%288%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a873283f0d04b410bd8"
+      ],
+      "purchasedCount": 5,
+      "timesPurchased": 5
+    },
+    {
+      "_id": "672faa3a2c5031d7c0b689f1",
+      "itemName": "Full Load / Large Load",
+      "price": 350,
+      "insidePrice": 25,
+      "insideWithDismantlingPrice": 50,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 01",
+      "spaceOfVan": 1,
+      "timespentOutside": 75,
+      "timespentInside": 75,
+      "timespentInsdiewithDis": 75,
+      "description": "– Bigger than most skips <br/>  – Includes labour for 75 minutes <br/>  – Equivalent space to 32 washing machines <br/>  – Max. weight limit 1000kg",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1763729327/uploads/1763729326610-king%20q%20%285%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a873283f0d04b410bd8",
+        "673929e13283f0d04b410bce",
+        "67392a6d3283f0d04b410bd6"
+      ],
+      "purchasedCount": 22,
+      "timesPurchased": 19
+    },
+    {
+      "_id": "69496f2d600883ac7de70241",
+      "itemName": "Wait and Load",
+      "price": 250,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": 0,
+      "isHidden": false,
+      "Objectsposition": "Outside",
+      "ewcCode": "1111111",
+      "spaceOfVan": 1,
+      "timespentOutside": 75,
+      "timespentInside": 75,
+      "timespentInsdiewithDis": 75,
+      "description": "You have 1 hour to load items yourself: max weight 1000kg",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1766502889/uploads/1766502880749-king%20q%20%2810%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a873283f0d04b410bd8"
+      ],
+      "purchasedCount": 5,
+      "timesPurchased": 5
+    }
+  ],
+  "Machine": [
+    {
+      "_id": "672fd4772c5031d7c0b68afd",
+      "itemName": "Washing Machine Removal",
+      "price": 35,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 36",
+      "spaceOfVan": 30,
+      "timespentOutside": 10,
+      "timespentInside": 20,
+      "timespentInsdiewithDis": 20,
+      "description": "Your appliance must be disconnected and drained completely before collection.",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1762345893/uploads/1762345887205-Washing%20Machine.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "673928fe3283f0d04b410bcc",
+        "67392a063283f0d04b410bd0"
+      ],
+      "purchasedCount": 44,
+      "timesPurchased": 44
+    }
+  ],
+  "Mattress": [
+    {
+      "_id": "672fa4de2c5031d7c0b689b8",
+      "itemName": "Double Mattress",
+      "price": 55,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 26,
+      "timespentOutside": 5,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 10,
+      "description": null,
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760988317/uploads/1760988315733-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2873%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392ac53283f0d04b410bdc"
+      ],
+      "purchasedCount": 193,
+      "timesPurchased": 178
+    },
+    {
+      "_id": "672fa5132c5031d7c0b689bb",
+      "itemName": "Emperor Mattress",
+      "price": 80,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 20,
+      "timespentOutside": 10,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": "If the mattress is infested, you will be required to wrap it in plastic and leave it outside 3 days prior to collection. You may also be subject to additional charges. <br/> Please inform us prior to booking.",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760988537/uploads/1760988536929-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2874%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392ac53283f0d04b410bdc"
+      ],
+      "purchasedCount": 7,
+      "timesPurchased": 7
+    },
+    {
+      "_id": "672fa59f2c5031d7c0b689c4",
+      "itemName": "King / Queen Mattress",
+      "price": 60,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 23,
+      "timespentOutside": 5,
+      "timespentInside": 15,
+      "timespentInsdiewithDis": 20,
+      "description": "If the mattress is infested, you will be required to wrap it in plastic and leave it outside 3 days prior to collection. You may also be subject to additional charges. Please inform us prior to booking.",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761166333/uploads/1761166332537-king%20q.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392ac53283f0d04b410bdc"
+      ],
+      "purchasedCount": 93,
+      "timesPurchased": 92
+    },
+    {
+      "_id": "672fa5cf2c5031d7c0b689c7",
+      "itemName": "Mattress Topper",
+      "price": 10,
+      "insidePrice": 2,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 50,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": null,
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761086174/uploads/1761086173541-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2877%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392ac53283f0d04b410bdc"
+      ],
+      "purchasedCount": 13,
+      "timesPurchased": 12
+    },
+    {
+      "_id": "672fa6572c5031d7c0b689d0",
+      "itemName": "Single Mattress",
+      "price": 50,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 50,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "If the mattress is infested, you will be required to wrap it in plastic and leave it outside 3 days prior to collection. You may also be subject to additional charges. Please inform us prior to booking.",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761087462/uploads/1761087460229-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2880%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392ac53283f0d04b410bdc"
+      ],
+      "purchasedCount": 33,
+      "timesPurchased": 30
+    }
+  ],
+  "MDF Boards": [
+    {
+      "_id": "672fcc692c5031d7c0b68ac4",
+      "itemName": "MDF Boards",
+      "price": 3,
+      "insidePrice": 2,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "03 01 05",
+      "spaceOfVan": 1000,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "MDF board removal London. <br/> – Price per square metre (adjust quantity accordingly) <br/> Our removal services  collect MDF boards throughout Greater London.",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761164090/uploads/1761164087654-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20-%202025-10-22T211443.475.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 15,
+      "timesPurchased": 3
+    }
+  ],
+  "Microwave": [
+    {
+      "_id": "672fc6b42c5031d7c0b68a7f",
+      "itemName": "Microwave",
+      "price": 10,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 35",
+      "spaceOfVan": 200,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Microwave waste removal. Our appliance recycling services handles all microwaves throughout Greater London. <br/> Professional management with proper WEEE recycling. ",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760911864/uploads/1760911863564-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2812%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a063283f0d04b410bd0",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 21,
+      "timesPurchased": 19
+    }
+  ],
+  "Mirror": [
+    {
+      "_id": "672fab332c5031d7c0b689fd",
+      "itemName": "Mirror",
+      "price": 10,
+      "insidePrice": 5,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 200,
+      "timespentOutside": 5,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": "If it can’t be carried by one person please request a quote",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761138262/uploads/1761138262004-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2895%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a4b3283f0d04b410bd4",
+        "67392b123283f0d04b410be2",
+        "67392ac53283f0d04b410bdc"
+      ],
+      "purchasedCount": 15,
+      "timesPurchased": 13
+    }
+  ],
+  "Office": [
+    {
+      "_id": "672f9f2f2c5031d7c0b68979",
+      "itemName": "Large Office Desk",
+      "price": 55,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 20,
+      "timespentOutside": 10,
+      "timespentInside": 20,
+      "timespentInsdiewithDis": 30,
+      "description": "-If you are not sure on the size please email a photo to hello@londonwastemanagement.com for confirmation before creating your booking",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1762349461/uploads/1762349460891-Large%20Desk.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392b123283f0d04b410be2",
+        "67392a4b3283f0d04b410bd4"
+      ],
+      "purchasedCount": 9,
+      "timesPurchased": 8
+    },
+    {
+      "_id": "672fa2672c5031d7c0b689a0",
+      "itemName": "Office Chair",
+      "price": 10,
+      "insidePrice": 5,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 30,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Office chair rubbish removal London <br> - same-day collection across all London boroughs.",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760965127/uploads/1760965126160-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2865%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392af73283f0d04b410be0",
+        "67392a4b3283f0d04b410bd4",
+        "67392b123283f0d04b410be2"
+      ],
+      "purchasedCount": 88,
+      "timesPurchased": 50
+    },
+    {
+      "_id": "672f9f652c5031d7c0b6897c",
+      "itemName": "Office Desk",
+      "price": 35,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 25,
+      "timespentOutside": 5,
+      "timespentInside": 20,
+      "timespentInsdiewithDis": 30,
+      "description": "-Does NOT include office chair or computer <br/> -If your desk weighs OVER 30kg please contact us for a custom quote",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1762349830/uploads/1762349829676-Large%20Desk%20%281%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392b123283f0d04b410be2",
+        "67392a4b3283f0d04b410bd4"
+      ],
+      "purchasedCount": 22,
+      "timesPurchased": 22
+    },
+    {
+      "_id": "672fc7362c5031d7c0b68a85",
+      "itemName": "Office Printer",
+      "price": 90,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 36",
+      "spaceOfVan": 30,
+      "timespentOutside": 10,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": "Office printer <br/> - Same day removal available with proper WEEE compliance. ",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1762424301/uploads/1762424300862-piw%20piw.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a063283f0d04b410bd0",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 1,
+      "timesPurchased": 1
+    }
+  ],
+  "Paint": [
+    {
+      "_id": "672fa7772c5031d7c0b689d9",
+      "itemName": "Paint",
+      "price": 5,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 28",
+      "spaceOfVan": 1000,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Paint Tins / Cans 1 Litre or LESS. <br/> If you have larger paint cans please get in touch via the following page or via email: hello@londonwastemanagement.com",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761132472/uploads/1761132471847-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2882%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392aa93283f0d04b410bda",
+        "67392a6d3283f0d04b410bd6",
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 20,
+      "timesPurchased": 6
+    }
+  ],
+  "Parasol": [
+    {
+      "_id": "672fb2ce2c5031d7c0b68a24",
+      "itemName": "Parasol",
+      "price": 5,
+      "insidePrice": 5,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 500,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "parasol",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761143825/uploads/1761143824793-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20-%202025-10-22T153657.759.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a6d3283f0d04b410bd6",
+        "67392b123283f0d04b410be2"
+      ],
+      "purchasedCount": 1,
+      "timesPurchased": 1
+    }
+  ],
+  "Plant": [
+    {
+      "_id": "672fb2072c5031d7c0b68a1b",
+      "itemName": "Large Plant Pot",
+      "price": 15,
+      "insidePrice": 5,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "17 01 03",
+      "spaceOfVan": 50,
+      "timespentOutside": 10,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": "Empty clay pot ONLY  Does NOT include Troughs",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761143325/uploads/1761143324461-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20-%202025-10-22T152337.743.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a6d3283f0d04b410bd6",
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 0,
+      "timesPurchased": 0
+    },
+    {
+      "_id": "672fb2332c5031d7c0b68a1e",
+      "itemName": "Large Plant Pot (including plant and soil)",
+      "price": 35,
+      "insidePrice": null,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 02 02 / 17 01 03",
+      "spaceOfVan": 75,
+      "timespentOutside": 5,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": null,
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761143294/uploads/1761143293906-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20-%202025-10-22T152811.792.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a6d3283f0d04b410bd6",
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 2,
+      "timesPurchased": 2
+    },
+    {
+      "_id": "672fb3232c5031d7c0b68a2a",
+      "itemName": "Small Plant Pot",
+      "price": 3,
+      "insidePrice": 2,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 02 02 / 17 01 03",
+      "spaceOfVan": 600,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "– May include a small amount of soil with a small plant  <br/> – Max. total weight 5kg",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761166674/uploads/1761166673418-king%20q%20%283%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a6d3283f0d04b410bd6"
+      ],
+      "purchasedCount": 1,
+      "timesPurchased": 1
+    }
+  ],
+  "Plasterboard": [
+    {
+      "_id": "672fccaf2c5031d7c0b68ac7",
+      "itemName": "Plasterboard",
+      "price": 3,
+      "insidePrice": 2,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "17 08 02",
+      "spaceOfVan": 300,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Price per square metre (adjust quantity accordingly)",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761164443/uploads/1761164442291-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20-%202025-10-22T212038.459.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 22,
+      "timesPurchased": 2
+    }
+  ],
+  "Printer": [
+    {
+      "_id": "672fc77f2c5031d7c0b68a88",
+      "itemName": "Printer Large",
+      "price": 50,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 36",
+      "spaceOfVan": 100,
+      "timespentOutside": 5,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": "Large printer removal <br/> -Our appliance recycling handle large printers. ",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1762424282/uploads/1762424280500-kahlanzi.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a063283f0d04b410bd0",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 2,
+      "timesPurchased": 2
+    },
+    {
+      "_id": "672fc7ac2c5031d7c0b68a8b",
+      "itemName": "Printer Small",
+      "price": 15,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 36",
+      "spaceOfVan": 75,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Small printer removal",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1762424264/uploads/1762424263514-Small%20Printer.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a063283f0d04b410bd0",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 7,
+      "timesPurchased": 7
+    }
+  ],
+  "Radiator": [
+    {
+      "_id": "672fcd7d2c5031d7c0b68ad3",
+      "itemName": "Small Radiator",
+      "price": 15,
+      "insidePrice": 5,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 50,
+      "timespentOutside": 10,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": "– Max. weight 20kg <br/> – Max. width 70cm <br/> – Must be disconnected and fully drained",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761165551/uploads/1761165551145-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20-%202025-10-22T213910.537.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 1,
+      "timesPurchased": 1
+    }
+  ],
+  "Radio": [
+    {
+      "_id": "672fc7c92c5031d7c0b68a8e",
+      "itemName": "Radio",
+      "price": 10,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 36",
+      "spaceOfVan": 1000,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": null,
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760912150/uploads/1760912149660-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2814%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a063283f0d04b410bd0",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 1,
+      "timesPurchased": 1
+    }
+  ],
+  "Rubble": [
+    {
+      "_id": "672fb2fb2c5031d7c0b68a27",
+      "itemName": "Sand (per rubble bag)",
+      "price": 25,
+      "insidePrice": 5,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "17 05 04",
+      "spaceOfVan": 37,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "If you have more than 10 bags consider a load size",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761144144/uploads/1761144142937-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20-%202025-10-22T154200.013.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a6d3283f0d04b410bd6",
+        "673929e13283f0d04b410bce",
+        "67392a873283f0d04b410bd8"
+      ],
+      "purchasedCount": 6,
+      "timesPurchased": 1
+    }
+  ],
+  "Screen": [
+    {
+      "_id": "672fc6e72c5031d7c0b68a82",
+      "itemName": "Monitor Screen",
+      "price": 10,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 36",
+      "spaceOfVan": 100,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "– Max size 30″ <br/> – If you have a monitor wider than 30″ book a TV",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761161874/uploads/1761161873685-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20-%202025-10-22T203721.047.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a063283f0d04b410bd0",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 5,
+      "timesPurchased": 5
+    }
+  ],
+  "Sewing": [
+    {
+      "_id": "672fc8152c5031d7c0b68a94",
+      "itemName": "Industrial Sewing Machine (including table)",
+      "price": 95,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 36",
+      "spaceOfVan": 15,
+      "timespentOutside": 10,
+      "timespentInside": 20,
+      "timespentInsdiewithDis": 45,
+      "description": "v removal London <br/> - specialised service for large machines.  <br/> -Our appliance recycling experts handle industrial sewing machines including tables across every London borough.",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760918932/uploads/1760918931977-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2832%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a063283f0d04b410bd0",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 2,
+      "timesPurchased": 2
+    },
+    {
+      "_id": "672fc7ee2c5031d7c0b68a91",
+      "itemName": "Sewing Machine",
+      "price": 25,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 36",
+      "spaceOfVan": 500,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Sewing machine removal ",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760915435/uploads/1760915433931-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2822%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a063283f0d04b410bd0",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 0,
+      "timesPurchased": 0
+    }
+  ],
+  "Shower": [
+    {
+      "_id": "672fccef2c5031d7c0b68aca",
+      "itemName": "Shower Screen",
+      "price": 20,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 500,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": null,
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761164678/uploads/1761164677611-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20-%202025-10-22T212431.626.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 7,
+      "timesPurchased": 6
+    },
+    {
+      "_id": "672fcd0b2c5031d7c0b68acd",
+      "itemName": "Shower Tray",
+      "price": 35,
+      "insidePrice": 5,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "17 01 03",
+      "spaceOfVan": 200,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Shower tray removal London. ",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1762345647/uploads/1762345647273-Shower%20Tray.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 1,
+      "timesPurchased": 1
+    }
+  ],
+  "Side Unit": [
+    {
+      "_id": "672f9fc32c5031d7c0b68982",
+      "itemName": "Side Unit",
+      "price": 50,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 35,
+      "timespentOutside": 5,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": null,
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760962315/uploads/1760962314993-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2854%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392b123283f0d04b410be2",
+        "67392a4b3283f0d04b410bd4"
+      ],
+      "purchasedCount": 6,
+      "timesPurchased": 6
+    }
+  ],
+  "Sink": [
+    {
+      "_id": "672fcd272c5031d7c0b68ad0",
+      "itemName": "Sink",
+      "price": 20,
+      "insidePrice": 5,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "17 01 01",
+      "spaceOfVan": 50,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Ensure it is disconnected and completely empty",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1762345792/uploads/1762345791489-Sink.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 1,
+      "timesPurchased": 1
+    }
+  ],
+  "Sofa": [
+    {
+      "_id": "672fa03b2c5031d7c0b68988",
+      "itemName": "2 Seater Sofa",
+      "price": 60,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 10,
+      "timespentOutside": 10,
+      "timespentInside": 20,
+      "timespentInsdiewithDis": 40,
+      "description": null,
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760962759/uploads/1760962757354-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2856%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392af73283f0d04b410be0",
+        "67392a4b3283f0d04b410bd4"
+      ],
+      "purchasedCount": 109,
+      "timesPurchased": 100
+    },
+    {
+      "_id": "672fa0592c5031d7c0b6898b",
+      "itemName": "3 Seater Sofa",
+      "price": 70,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 7,
+      "timespentOutside": 10,
+      "timespentInside": 20,
+      "timespentInsdiewithDis": 40,
+      "description": "3 seater sofa removal London ",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760963062/uploads/1760963061462-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2857%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392af73283f0d04b410be0",
+        "67392a4b3283f0d04b410bd4"
+      ],
+      "purchasedCount": 132,
+      "timesPurchased": 125
+    },
+    {
+      "_id": "672fa0ad2c5031d7c0b68991",
+      "itemName": "Corner Sofa",
+      "price": 95,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 5,
+      "timespentOutside": 10,
+      "timespentInside": 20,
+      "timespentInsdiewithDis": 40,
+      "description": "– Maximum 5 seats <br/> – Book a “Large Corner Sofa” if you have more than 5 seats",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760963739/uploads/1760963738422-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2859%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392af73283f0d04b410be0",
+        "67392a4b3283f0d04b410bd4"
+      ],
+      "purchasedCount": 41,
+      "timesPurchased": 41
+    },
+    {
+      "_id": "672fa2472c5031d7c0b6899d",
+      "itemName": "Large Corner Sofa",
+      "price": 110,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 7,
+      "timespentOutside": 10,
+      "timespentInside": 20,
+      "timespentInsdiewithDis": 40,
+      "description": "Large Corner Sofa more than 5 seats",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760964921/uploads/1760964919861-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2864%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392af73283f0d04b410be0",
+        "67392a4b3283f0d04b410bd4"
+      ],
+      "purchasedCount": 5,
+      "timesPurchased": 5
+    },
+    {
+      "_id": "672fa2942c5031d7c0b689a3",
+      "itemName": "Sofa Bed",
+      "price": 75,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 12,
+      "timespentOutside": 10,
+      "timespentInside": 30,
+      "timespentInsdiewithDis": 40,
+      "description": "Does your sofa convert into a bed?",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761665259/uploads/1761665256956-king%20q%20%282%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392af73283f0d04b410be0",
+        "67392a4b3283f0d04b410bd4"
+      ],
+      "purchasedCount": 44,
+      "timesPurchased": 44
+    }
+  ],
+  "Soil": [
+    {
+      "_id": "672fb34a2c5031d7c0b68a2d",
+      "itemName": "Soil (per rubble bag)",
+      "price": 20,
+      "insidePrice": 5,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "17 05 04",
+      "spaceOfVan": 37,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": " If you have more than 10 bags, consider a load size. <br/>  We're London's most trusted waste clearance provider for garden waste. ",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761158560/uploads/1761158559207-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20-%202025-10-22T194232.853.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a6d3283f0d04b410bd6",
+        "67392a873283f0d04b410bd8",
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 1,
+      "timesPurchased": 1
+    }
+  ],
+  "Standard": [
+    {
+      "_id": "672fc36b2c5031d7c0b68a61",
+      "itemName": "Standard Fridge Freezer",
+      "price": 70,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 36",
+      "spaceOfVan": 35,
+      "timespentOutside": 10,
+      "timespentInside": 20,
+      "timespentInsdiewithDis": 20,
+      "description": "-The motor must be attached.",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760918329/uploads/1760918327208-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2829%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a2e3283f0d04b410bd2",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 29,
+      "timesPurchased": 27
+    },
+    {
+      "_id": "672fcdd82c5031d7c0b68ad9",
+      "itemName": "Standard Radiator",
+      "price": 25,
+      "insidePrice": 5,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 100,
+      "timespentOutside": 5,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": "-Must be disconnected and fully drained",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761165720/uploads/1761165720171-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20-%202025-10-22T214159.834.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 7,
+      "timesPurchased": 5
+    }
+  ],
+  "Storage Heater": [
+    {
+      "_id": "672fa7a42c5031d7c0b689dc",
+      "itemName": "Storage Heater",
+      "price": 75,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 30,
+      "timespentOutside": 10,
+      "timespentInside": 30,
+      "timespentInsdiewithDis": 40,
+      "description": "-Your appliance must be disconnected and drained completely before collection. <br/> -This item must be outside the property ready for collection if this is not possible we may be able to remove from inside but bear no responsibility for any damage that may occur during the removal due to the significant weight and size of the heater",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760909282/uploads/1760909282058-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%282%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a063283f0d04b410bd0",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 1,
+      "timesPurchased": 1
+    }
+  ],
+  "Suitcase": [
+    {
+      "_id": "672fab5e2c5031d7c0b68a00",
+      "itemName": "Suitcase",
+      "price": 10,
+      "insidePrice": 5,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 75,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "- Must be empty",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761139013/uploads/1761139012215-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2896%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a873283f0d04b410bd8",
+        "67392a4b3283f0d04b410bd4"
+      ],
+      "purchasedCount": 7,
+      "timesPurchased": 7
+    }
+  ],
+  "Table": [
+    {
+      "_id": "672f9dd82c5031d7c0b68964",
+      "itemName": "Bedside Table",
+      "price": 10,
+      "insidePrice": 2,
+      "insideWithDismantlingPrice": 5,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 400,
+      "timespentOutside": 1,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": "Bedside table removal London   <br/> - bedroom furniture disposal across all London boroughs. <br/>  Same-day waste management available with eco-friendly disposal. ",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760920911/uploads/1760920910872-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2843%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392b123283f0d04b410be2",
+        "67392ac53283f0d04b410bdc",
+        "67392a4b3283f0d04b410bd4"
+      ],
+      "purchasedCount": 49,
+      "timesPurchased": 33
+    },
+    {
+      "_id": "672f9e672c5031d7c0b6896d",
+      "itemName": "Dressing Table",
+      "price": 45,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 100,
+      "timespentOutside": 5,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": null,
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760958447/uploads/1760958446454-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2846%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392b123283f0d04b410be2",
+        "67392a4b3283f0d04b410bd4"
+      ],
+      "purchasedCount": 8,
+      "timesPurchased": 8
+    },
+    {
+      "_id": "672f9f9d2c5031d7c0b6897f",
+      "itemName": "Pool / Snooker Table",
+      "price": 250,
+      "insidePrice": 50,
+      "insideWithDismantlingPrice": 100,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 3,
+      "timespentOutside": 20,
+      "timespentInside": 90,
+      "timespentInsdiewithDis": 180,
+      "description": "If your table is 250kg or more please call/email to create the booking instead.  You may be subject to a higher fee.",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760961744/uploads/1760961743703-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2853%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392b123283f0d04b410be2"
+      ],
+      "purchasedCount": 0,
+      "timesPurchased": 0
+    }
+  ],
+  "Tiles": [
+    {
+      "_id": "672fce242c5031d7c0b68adc",
+      "itemName": "Tiles",
+      "price": 20,
+      "insidePrice": 5,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "17 01 03",
+      "spaceOfVan": 1000,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Max. weight 20kg",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761165951/uploads/1761165950362-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20-%202025-10-22T214507.940.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 2,
+      "timesPurchased": 2
+    }
+  ],
+  "Timber Planks": [
+    {
+      "_id": "672fce552c5031d7c0b68adf",
+      "itemName": "Timber Planks",
+      "price": 7.5,
+      "insidePrice": 2.5,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "17 02 03",
+      "spaceOfVan": 200,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "– Each plank up to 2m long  <br/> – Price per plank (adjust quantity accordingly)",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761166742/uploads/1761166742019-king%20q%20%284%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 19,
+      "timesPurchased": 2
+    }
+  ],
+  "Toaster": [
+    {
+      "_id": "672fc8782c5031d7c0b68a97",
+      "itemName": "Toaster",
+      "price": 3,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 36",
+      "spaceOfVan": 1000,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Toaster removal ",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760919168/uploads/1760919167689-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2833%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a063283f0d04b410bd0",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 4,
+      "timesPurchased": 4
+    }
+  ],
+  "Toilet": [
+    {
+      "_id": "672fce852c5031d7c0b68ae2",
+      "itemName": "Toilet",
+      "price": 25,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "17 01 01",
+      "spaceOfVan": 100,
+      "timespentOutside": 5,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": "Ensure it is disconnected and completely empty",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761168308/uploads/1761168307846-king%20q%20%286%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 10,
+      "timesPurchased": 10
+    }
+  ],
+  "Treadmill": [
+    {
+      "_id": "672fc89b2c5031d7c0b68a9a",
+      "itemName": "Treadmill",
+      "price": 75,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 36",
+      "spaceOfVan": 20,
+      "timespentOutside": 10,
+      "timespentInside": 20,
+      "timespentInsdiewithDis": 40,
+      "description": "Treadmill removal",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760915563/uploads/1760915562359-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2823%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a063283f0d04b410bd0",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 4,
+      "timesPurchased": 4
+    }
+  ],
+  "Tumble Dryer": [
+    {
+      "_id": "672fd3ff2c5031d7c0b68afa",
+      "itemName": "Tumble Dryer",
+      "price": 35,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 36",
+      "spaceOfVan": 30,
+      "timespentOutside": 10,
+      "timespentInside": 20,
+      "timespentInsdiewithDis": 20,
+      "description": "-Clothes Dryer  <br/>  -Your appliance must be disconnected and drained completely before collection",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760912614/uploads/1760912613080-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2816%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "673928fe3283f0d04b410bcc",
+        "67392a063283f0d04b410bd0"
+      ],
+      "purchasedCount": 13,
+      "timesPurchased": 13
+    }
+  ],
+  "TV": [
+    {
+      "_id": "672fc8d12c5031d7c0b68a9d",
+      "itemName": "TV",
+      "price": 40,
+      "insidePrice": 5,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 36",
+      "spaceOfVan": 100,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Old and new style Televisions. <br/> Max size 50 inches, for anything bigger book a quantity of 2.",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760915790/uploads/1760915789396-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2824%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a063283f0d04b410bd0",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 25,
+      "timesPurchased": 21
+    },
+    {
+      "_id": "672f9fef2c5031d7c0b68985",
+      "itemName": "TV Stand",
+      "price": 35,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 01 35",
+      "spaceOfVan": 50,
+      "timespentOutside": 5,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": "Does NOT include TV",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760962572/uploads/1760962572273-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2855%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392b123283f0d04b410be2",
+        "67392a4b3283f0d04b410bd4"
+      ],
+      "purchasedCount": 17,
+      "timesPurchased": 17
+    }
+  ],
+  "Underlay": [
+    {
+      "_id": "672fcea62c5031d7c0b68ae5",
+      "itemName": "Underlay",
+      "price": 15,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "17 02 03",
+      "spaceOfVan": 500,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Up to 15 boards, or 10ft roll.",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761169839/uploads/1761169838382-king%20q%20%287%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 1,
+      "timesPurchased": 1
+    }
+  ],
+  "Vaccums/Hoovers": [
+    {
+      "_id": "672fab9f2c5031d7c0b68a03",
+      "itemName": "Vaccums/Hoovers",
+      "price": 15,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "16 02 14",
+      "spaceOfVan": 200,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Same day removal available with proper WEEE recycling. ",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760916464/uploads/1760916464100-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2826%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a873283f0d04b410bd8",
+        "67392a063283f0d04b410bd0",
+        "673928fe3283f0d04b410bcc"
+      ],
+      "purchasedCount": 27,
+      "timesPurchased": 23
+    }
+  ],
+  "Wardrobe": [
+    {
+      "_id": "672fba752c5031d7c0b68a48",
+      "itemName": "Large Wardrobe",
+      "price": 65,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 50,
+      "timespentOutside": 10,
+      "timespentInside": 20,
+      "timespentInsdiewithDis": 40,
+      "description": "90cm wide or more",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761160275/uploads/1761160274065-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20-%202025-10-22T201110.848.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a4b3283f0d04b410bd4",
+        "67392b123283f0d04b410be2"
+      ],
+      "purchasedCount": 29,
+      "timesPurchased": 29
+    },
+    {
+      "_id": "672fbb642c5031d7c0b68a4b",
+      "itemName": "Small Wardrobe",
+      "price": 40,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": 20,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 07",
+      "spaceOfVan": 100,
+      "timespentOutside": 5,
+      "timespentInside": 10,
+      "timespentInsdiewithDis": 20,
+      "description": "Max. width 90cm",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761160816/uploads/1761160815694-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20-%202025-10-22T202014.312.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a4b3283f0d04b410bd4",
+        "67392b123283f0d04b410be2"
+      ],
+      "purchasedCount": 26,
+      "timesPurchased": 25
+    }
+  ],
+  "Waste": [
+    {
+      "_id": "672fcae82c5031d7c0b68ab2",
+      "itemName": "Construction Waste Bag",
+      "price": 20,
+      "insidePrice": 5,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "17 09 04",
+      "spaceOfVan": null,
+      "timespentOutside": null,
+      "timespentInside": null,
+      "timespentInsdiewithDis": null,
+      "description": "– Max. weight 20kg (per bag) <br/> – Builders waste (one rubble bag)<br/> – If you have more than 10 bags consider booking a load size",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761163004/uploads/1761163003174-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20-%202025-10-22T205611.948.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 8,
+      "timesPurchased": 4
+    },
+    {
+      "_id": "672faabb2c5031d7c0b689f7",
+      "itemName": "General Waste Bags",
+      "price": 5,
+      "insidePrice": 2.5,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "20 03 01",
+      "spaceOfVan": 120,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Professional waste clearance. Max. weight per bag is 25kg. Does not include Tonne bags, if unsure email photos to hello@londonwastemanagement.com. ",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761136702/uploads/1761136702173-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2893%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a873283f0d04b410bd8"
+      ],
+      "purchasedCount": 575,
+      "timesPurchased": 86
+    }
+  ],
+  "Window": [
+    {
+      "_id": "672fcef22c5031d7c0b68ae8",
+      "itemName": "Window",
+      "price": 20,
+      "insidePrice": 10,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "17 09 04",
+      "spaceOfVan": 100,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Per pane of Glass <br/> Single or Double glazed",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1760920009/uploads/1760920009012-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2838%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 4,
+      "timesPurchased": 1
+    }
+  ],
+  "Wooden": [
+    {
+      "_id": "672fabf52c5031d7c0b68a09",
+      "itemName": "Wooden Pallet – Heavy",
+      "price": 20,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "15 01 03",
+      "spaceOfVan": null,
+      "timespentOutside": null,
+      "timespentInside": null,
+      "timespentInsdiewithDis": null,
+      "description": "-Euro Pallet <br/> -Price per pallet (adjust quantity accordingly)",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761139404/uploads/1761139404002-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20%2897%29.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a873283f0d04b410bd8",
+        "67392a6d3283f0d04b410bd6",
+        "673929e13283f0d04b410bce"
+      ],
+      "purchasedCount": 23,
+      "timesPurchased": 13
+    },
+    {
+      "_id": "672fb39d2c5031d7c0b68a30",
+      "itemName": "Wooden Pallet – Light",
+      "price": 10,
+      "insidePrice": 0,
+      "insideWithDismantlingPrice": null,
+      "isHidden": false,
+      "Objectsposition": null,
+      "ewcCode": "15 01 03",
+      "spaceOfVan": 68,
+      "timespentOutside": 5,
+      "timespentInside": 5,
+      "timespentInsdiewithDis": 10,
+      "description": "Price per pallet (adjust quantity accordingly).",
+      "image": "https://res.cloudinary.com/dehzhd6xs/image/upload/v1761158743/uploads/1761158742498-Red%20White%20Circle%20Football%20Club%20Crest%20Logo%20-%202025-10-22T194539.904.svg.jpg",
+      "images": [],
+      "categoryIds": [
+        "67392a6d3283f0d04b410bd6",
+        "673929e13283f0d04b410bce",
+        "67392a873283f0d04b410bd8"
+      ],
+      "purchasedCount": 40,
+      "timesPurchased": 15
+    }
+  ]
+}

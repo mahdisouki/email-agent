@@ -1,0 +1,4 @@
+Requirement already satisfied: pydeck in c:\users\dell\anaconda3\envs\autosocial\lib\site-packages (0.9.1)
+Requirement already satisfied: jinja2>=2.10.1 in c:\users\dell\anaconda3\envs\autosocial\lib\site-packages (from pydeck) (3.1.6)
+Requirement already satisfied: numpy>=1.16.4 in c:\users\dell\anaconda3\envs\autosocial\lib\site-packages (from pydeck) (2.4.0)
+Requirement already satisfied: MarkupSafe>=2.0 in c:\users\dell\anaconda3\envs\autosocial\lib\site-packages (from jinja2>=2.10.1->pydeck) (3.0.3)

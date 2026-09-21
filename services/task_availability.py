@@ -117,7 +117,13 @@ def _format_date_label(d: date, *, today: date) -> str:
     return pretty
 
 
-def _weekday_date(today: date, weekday: int, *, force_next_week: bool) -> date:
+def _weekday_date(today: date, weekday: int, *, force_next_week: bool = False) -> date:
+    """
+    Next occurrence of weekday from today.
+
+    If today is that weekday, returns 7 days ahead.
+    force_next_week=True skips the upcoming occurrence (use for "Tuesday next week").
+    """
     delta = (weekday - today.weekday()) % 7
     if delta == 0:
         delta = 7
@@ -169,9 +175,14 @@ def extract_customer_preferred_dates(
         _add(today + timedelta(days=1))
 
     for name, wd in _WEEKDAY_NAMES.items():
-        if re.search(rf"\bnext\s+{re.escape(name)}\b", low):
+        # "Tuesday next week" / "next week's Tuesday" → week after the upcoming one
+        if re.search(
+            rf"\b(?:{re.escape(name)}\s+next\s+week|next\s+week(?:'s)?\s+{re.escape(name)})\b",
+            low,
+        ):
             _add(_weekday_date(today, wd, force_next_week=True))
-        elif re.search(rf"\b{re.escape(name)}\b", low):
+        # "next Tuesday" / "Tuesday" → the upcoming Tuesday (or +7 if today is Tuesday)
+        elif re.search(rf"\b(?:next\s+)?{re.escape(name)}\b", low):
             _add(_weekday_date(today, wd, force_next_week=False))
 
     for m in re.finditer(r"\b(20\d{2}-\d{2}-\d{2})\b", text or ""):

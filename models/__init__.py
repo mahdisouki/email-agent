@@ -3,6 +3,7 @@
 from models.schemas import (
     ClassifyEmailRequest,
     CustomerDetails,
+    DetectedItem,
     ExtractedItem,
     GmailMessage,
     OrderLLMRequest,
@@ -15,6 +16,7 @@ from models.schemas import (
 __all__ = [
     "ClassifyEmailRequest",
     "CustomerDetails",
+    "DetectedItem",
     "ExtractedItem",
     "GmailMessage",
     "OrderLLMRequest",

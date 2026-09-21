@@ -1,1 +1,1 @@
-"""Category-specific reply flows (quote, complaint)."""
+"""Category-specific flows (quote items, complaint replies)."""

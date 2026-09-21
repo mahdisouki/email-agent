@@ -76,6 +76,7 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
                     "aiCategory": "quote | complaint | ...",
                 },
                 "thread": "optional array",
+                "detectedItems": "optional [{ name, count }, ...]",
             },
             "hint": "Do not send flat { subject, contentMain } — wrap inside message.",
         },
@@ -167,11 +168,29 @@ def _suggest_reply(data: SuggestReplyRequest) -> dict:
     _log("📥 Suggest reply — request", {
         "message": target,
         "thread": thread,
+        "detectedItems": [
+            i.model_dump() if hasattr(i, "model_dump") else i
+            for i in (data.detectedItems or [])
+        ],
     })
 
     attachments = target.get("attachments")
     if attachments is None and data.message is not None:
         attachments = data.message.attachments
+
+    detected_items = [
+        item.model_dump() if hasattr(item, "model_dump") else dict(item)
+        for item in (data.detectedItems or [])
+    ] or None
+
+    # Prefer target category; fall back to top-level / latest message (Node often
+    # sets aiCategory on message while pick_target_message returns a thread row).
+    category = (
+        target.get("aiCategory")
+        or latest.get("aiCategory")
+        or data.aiCategory
+        or (data.message.aiCategory if data.message else None)
+    )
 
     result = suggest_reply(
         subject=target["subject"],
@@ -182,7 +201,8 @@ def _suggest_reply(data: SuggestReplyRequest) -> dict:
         thread=thread,
         parsed_form=None,
         attachments=attachments,
-        category=target.get("aiCategory"),
+        category=category,
+        detected_items=detected_items,
     )
 
     result["threadId"] = (
@@ -231,6 +251,7 @@ def _order_llm(data: OrderLLMRequest) -> dict:
     _log("📥 Order LLM — request", {
         "message": target,
         "thread": thread,
+        "items": data.items,
     })
 
     result = extract_customer_from_conversation(
@@ -238,6 +259,7 @@ def _order_llm(data: OrderLLMRequest) -> dict:
         content_main=body or (thread[-1].get("contentMain") if thread else ""),
         from_header=target.get("from") or "",
         subject=target.get("subject") or "",
+        items=data.items,
     )
 
     result["threadId"] = (
@@ -265,7 +287,7 @@ def _order_llm(data: OrderLLMRequest) -> dict:
 
 @app.post("/order_llm")
 def order_llm_route(data: OrderLLMRequest):
-    """Extract customer contact details and items from a full conversation thread."""
+    """Extract customer/booking details from the thread; items come from the request body."""
     return _order_llm(data)
 
 

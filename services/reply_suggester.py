@@ -216,20 +216,17 @@ def return_replies(
 
 
 def _default_reply(category: str, name: str) -> dict:
-    reply = (
-        f"Hi {name},\n\n"
-        "Thank you for getting in touch.\n\n"
-        "We have received your message and will respond shortly.\n\n"
-        "Kind regards."
-    )
+    """No drafts for unsupported categories (e.g. other)."""
     return return_replies(
         {
             "category": category,
             "phase": "unsupported",
             "missing_slots": [],
-            "reason": f"No dedicated reply flow for '{category}' yet",
+            "reason": f"No dedicated reply flow for '{category}'",
+            "customer_name": name,
         },
-        [reply],
+        [],
+        draft_source="none",
     )
 
 
@@ -258,6 +255,7 @@ def suggest_reply(
     parsed_form: dict | None = None,
     attachments: list[dict] | None = None,
     category: str | None = None,
+    detected_items: list[dict[str, Any]] | None = None,
 ) -> dict:
     subject = (subject or "").strip()
     content_main = (content_main or "").strip()
@@ -314,6 +312,7 @@ def suggest_reply(
             attachments=attachments,
             thread=thread,
             greeting_name=name,
+            detected_items=detected_items,
         )
 
     if category == "complaint":

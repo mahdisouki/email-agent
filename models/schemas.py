@@ -49,6 +49,13 @@ class GmailMessage(BaseModel):
     model_config = {"populate_by_name": True}
 
 
+class DetectedItem(BaseModel):
+    """Vision/upload-detected item from the client (name + count)."""
+
+    name: str
+    count: int = 1
+
+
 class SuggestReplyRequest(BaseModel):
     """POST your backend `{ success, message }` response as-is."""
 
@@ -57,8 +64,11 @@ class SuggestReplyRequest(BaseModel):
     messages: list[dict] | None = None
     thread: list[ThreadMessage] | None = None
     pricing: PricingHints | None = None
+    detectedItems: list[DetectedItem] | None = None
     threadId: str | None = None
     messageId: str | None = None
+    # Top-level category from Node (fallback when thread target has no aiCategory)
+    aiCategory: str | None = None
 
     @model_validator(mode="before")
     @classmethod
@@ -82,6 +92,10 @@ class SuggestReplyRequest(BaseModel):
                 out.setdefault("messageId", mid)
             if tid:
                 out.setdefault("threadId", tid)
+            # Carry outer category onto message when message lacks one
+            outer_cat = outer.get("aiCategory") or outer.get("category")
+            if outer_cat and not (out.get("aiCategory") or out.get("category")):
+                out["aiCategory"] = outer_cat
             return out
 
         # Backend thread array: use last as message if message omitted
@@ -90,22 +104,28 @@ class SuggestReplyRequest(BaseModel):
             if isinstance(msgs, list) and msgs:
                 data = {**data, "message": msgs[-1]}
 
+        # Preserve top-level category alias
+        top_cat = data.get("aiCategory") or data.get("category")
+
         if data.get("message") is not None:
             msg = _merge_ids_into_message(data["message"], data)
             mid = _coalesce_id(data) or _coalesce_id(msg)
             tid = data.get("threadId") or msg.get("threadId")
-            return {
+            out = {
                 **data,
                 "message": msg,
                 **({"messageId": mid} if mid else {}),
                 **({"threadId": tid} if tid else {}),
             }
+            if top_cat:
+                out["aiCategory"] = top_cat
+            return out
 
         # Flat body (Node suggestReplyService: threadId, messageId, contentMain, …)
         if data.get("contentMain") is not None:
             mid = _coalesce_id(data)
             tid = data.get("threadId") or data.get("thread_id")
-            return {
+            out = {
                 "success": data.get("success", True),
                 "messageId": mid,
                 "threadId": tid,
@@ -122,7 +142,13 @@ class SuggestReplyRequest(BaseModel):
                     "date": data.get("date"),
                 },
                 "thread": data.get("thread"),
+                "detectedItems": data.get("detectedItems") or data.get("detected_items"),
             }
+            if data.get("items") is not None:
+                out["items"] = data.get("items")
+            if top_cat:
+                out["aiCategory"] = top_cat
+            return out
         return data
 
 
@@ -141,10 +167,17 @@ class ExtractedItem(BaseModel):
     status: str = "custom"
     item_id: str | None = None
     item_name: str | None = None
+    type: str | None = None  # optional alias from frontend (standard | custom)
+    price: float | None = None
+    inside: float | None = None
+    inside_with_dismantling: float | None = None
+    final_price: float | None = None
+    # Outside | Inside | Inside with dismantling
+    position: str | None = None
 
 
 class OrderLLMRequest(BaseModel):
-    """Same envelope as suggest_reply — message + optional thread."""
+    """Same envelope as suggest_reply — message + optional thread + items from frontend."""
 
     success: bool = True
     message: GmailMessage | None = None
@@ -152,11 +185,21 @@ class OrderLLMRequest(BaseModel):
     thread: list[ThreadMessage] | None = None
     threadId: str | None = None
     messageId: str | None = None
+    # Items come from the frontend (e.g. quote suggest_reply) — not guessed by LLM
+    items: list[dict] | None = None
 
     @model_validator(mode="before")
     @classmethod
     def normalize_payload(cls, data):
-        return SuggestReplyRequest.normalize_payload(data)
+        if not isinstance(data, dict):
+            return data
+        items = data.get("items")
+        normalized = SuggestReplyRequest.normalize_payload(data)
+        if isinstance(normalized, dict) and items is not None and "items" not in normalized:
+            normalized = {**normalized, "items": items}
+        elif isinstance(normalized, dict) and items is not None:
+            normalized.setdefault("items", items)
+        return normalized
 
 
 class OrderLLMResponse(BaseModel):
@@ -166,6 +209,8 @@ class OrderLLMResponse(BaseModel):
     bookingDate: str | None = None
     bookingTimeSlot: str | None = None
     customerNote: str | None = None
+    # Outside | Inside | Inside with dismantling
+    position: str | None = None
     threadId: str | None = None
     messageId: str | None = None
     subject: str | None = None

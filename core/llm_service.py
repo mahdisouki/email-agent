@@ -1,5 +1,5 @@
 """
-LLM helpers for classifier, quote replies, order extraction, and catalogue pricing.
+LLM helpers for classifier, order extraction, catalogue item extraction, and pricing.
 
 Uses a self-hosted Ollama-compatible POST /api/generate endpoint.
 
@@ -11,7 +11,6 @@ from __future__ import annotations
 
 import json
 import os
-import re
 import urllib.error
 import urllib.request
 from typing import Any
@@ -153,108 +152,3 @@ def groq_chat_extra_kwargs(model: str) -> dict:
 #         from groq import Groq
 #         _client = Groq(api_key=GROQ_API_KEY)
 #     return _client
-
-
-def _strip_staff_signature(text: str) -> str:
-    """Keep only the body up to and including 'Kind regards.' — drop staff sign-off blocks."""
-    lines = (text or "").splitlines()
-    if not lines:
-        return text
-    out: list[str] = []
-    for line in lines:
-        out.append(line)
-        if re.match(r"^\s*kind regards[,.]?\s*$", line.strip(), re.I):
-            break
-    body = "\n".join(out).rstrip()
-    if body and not re.search(r"kind regards", body, re.I):
-        body = f"{body.rstrip()}\n\nKind regards."
-    return body
-
-
-def llm_suggest_quote_companion(
-    *,
-    customer_name: str,
-    phase: str,
-    missing_slots: list[str],
-    reason: str,
-    subject: str,
-    thread_summary: str,
-    standard_replies: list[str],
-    item_description: str = "",
-    pricing_summary: str = "",
-    availability_summary: str = "",
-) -> tuple[str | None, str | None]:
-    """
-    Generate one additional reply variant to help move the quote conversation forward.
-    Returns (reply_text, error).
-    """
-    if not is_llm_suggest_enabled():
-        return None, "LLM disabled"
-
-    standards = "\n\n---\n\n".join(
-        f"Standard suggestion {i + 1}:\n{r[:3500]}"
-        for i, r in enumerate(standard_replies[:4])
-        if r
-    )
-    missing_text = ", ".join(missing_slots) if missing_slots else "none"
-    prompt = f"""You draft customer service emails for London Waste Management (UK waste collection).
-
-Write ONE additional reply email — complementary to the standard suggestion(s) below.
-Cover different topics or ask for different details; do NOT repeat the same asks or paragraphs.
-
-Rules:
-- British English (UK spelling, floor numbering).
-- Start with "Hi {customer_name}," then a blank line.
-- End with "Kind regards." only — do NOT add your name, job title, company name, phone, email, or office address.
-- Do NOT repeat topics already covered in STANDARD SUGGESTION(S): price, earliest collection date/time slots, photo requests, address/phone/email asks, or working hours — unless the standard suggestion omitted them entirely.
-- Focus on MISSING SLOTS not already addressed in the standard suggestion(s), e.g. collection location (inside/outside, floor, lift), item weight, lift/crew requirements, dismantling.
-- Do NOT invent prices unless they appear in PRICING below.
-- Use ONLY dates and time slots listed in AVAILABILITY below — never invent times (e.g. do not say "10am onwards").
-- If AVAILABILITY is empty or "(none yet)", do NOT invent dates or slots.
-- NEVER repeat or echo the customer's questions back to them.
-- If the customer asked for the latest slot, offer afternoon (12pm–5pm) or AnyTime from AVAILABILITY only.
-- If mentioning working days, say we work Monday to Sunday (not Saturday only, no Sunday surcharge).
-- Ask only for information listed in MISSING SLOTS (if any) that is not already asked in the standard suggestion(s).
-- Be warm, professional, concise.
-- Output ONLY the email body text — no labels, no markdown fences.
-
-CONTEXT
-Phase: {phase}
-Reason: {reason}
-Subject: {subject or "(none)"}
-Missing slots: {missing_text}
-Item description so far: {item_description or "(none yet)"}
-PRICING: {pricing_summary or "(none yet)"}
-AVAILABILITY (use these dates/slots only): {availability_summary or "(none yet)"}
-
-THREAD (oldest first):
-{thread_summary[:10000]}
-
-STANDARD SUGGESTION(S) ALREADY PROVIDED (do NOT duplicate these topics — cover what they left out):
-{standards[:12000] or "(none)"}
-"""
-
-    try:
-        raw = llm_chat(
-            system=(
-                "You write UK waste-collection customer emails. "
-                "Output only the email body."
-            ),
-            user=prompt,
-            temperature=0.7,
-        )
-    except Exception as exc:
-        return None, f"LLM request failed: {exc}"
-
-    text = (raw or "").strip()
-    if text.startswith("```"):
-        text = text.strip("`").strip()
-        if text.lower().startswith("text"):
-            text = text[4:].strip()
-    if not text or len(text) < 40:
-        return None, "LLM returned empty companion reply"
-    if f"hi {customer_name.lower()}" not in text.lower()[:80]:
-        text = f"Hi {customer_name},\n\n{text}"
-    if "kind regards" not in text.lower():
-        text = f"{text.rstrip()}\n\nKind regards."
-    return _strip_staff_signature(text), None

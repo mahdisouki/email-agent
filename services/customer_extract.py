@@ -1,4 +1,7 @@
-"""Extract structured customer details and items from a quote conversation — LLM only."""
+"""Extract structured customer/booking details from a quote conversation — LLM only.
+
+Items are supplied by the frontend (not guessed here).
+"""
 from __future__ import annotations
 
 import json
@@ -241,26 +244,6 @@ def _normalize_customer_payload(raw: dict[str, Any]) -> dict[str, Any]:
                 return str(val).strip()
         return None
 
-    items_out: list[dict[str, Any]] = []
-    items_raw = raw.get("items")
-    if isinstance(items_raw, list):
-        for row in items_raw:
-            if isinstance(row, str) and row.strip():
-                items_out.append({"phrase": row.strip(), "quantity": 1})
-                continue
-            if not isinstance(row, dict):
-                continue
-            phrase = str(
-                row.get("phrase") or row.get("item") or row.get("name") or row.get("description") or ""
-            ).strip()
-            if not phrase:
-                continue
-            try:
-                qty = max(1, int(row.get("quantity") or row.get("qty") or 1))
-            except (TypeError, ValueError):
-                qty = 1
-            items_out.append({"phrase": phrase, "quantity": qty})
-
     booking_date = _str("bookingDate", "booking_date", "collectionDate", "collection_date")
     booking_slot = _str(
         "bookingTimeSlot",
@@ -281,6 +264,14 @@ def _normalize_customer_payload(raw: dict[str, Any]) -> dict[str, Any]:
         "collection_note",
     )
 
+    position = _normalize_position(
+        raw.get("position")
+        or raw.get("collectionPosition")
+        or raw.get("collection_position")
+        or raw.get("collectionSide")
+        or raw.get("collection_side")
+    )
+
     return {
         "customer": {
             "firstName": _str("firstName", "first_name"),
@@ -290,11 +281,167 @@ def _normalize_customer_payload(raw: dict[str, Any]) -> dict[str, Any]:
             "postcode": _str("postcode", "post_code"),
             "address": _str("address"),
         },
-        "items": items_out,
         "bookingDate": booking_date,
         "bookingTimeSlot": booking_slot,
         "customerNote": note,
+        "position": position,
+        # Never take items from the LLM — frontend supplies them
+        "items": [],
     }
+
+
+_POSITION_OUTSIDE = "Outside"
+_POSITION_INSIDE = "Inside"
+_POSITION_INSIDE_DISMANTLING = "Inside with dismantling"
+
+
+def _normalize_position(value: Any) -> str | None:
+    """Map free text / aliases → Outside | Inside | Inside with dismantling."""
+    if value is None:
+        return None
+    raw = str(value).strip()
+    if not raw:
+        return None
+    low = raw.lower().replace("_", " ").replace("-", " ")
+    low = re.sub(r"\s+", " ", low)
+
+    if "dismantl" in low and "no dismantl" not in low:
+        return _POSITION_INSIDE_DISMANTLING
+    if low in ("outside", "out", "kerbside", "curbside", "exterior"):
+        return _POSITION_OUTSIDE
+    if low in ("inside", "in", "interior"):
+        return _POSITION_INSIDE
+    if "outside" in low or "kerbside" in low or "left outside" in low:
+        return _POSITION_OUTSIDE
+    if "inside" in low:
+        return _POSITION_INSIDE
+    return None
+
+
+def _position_from_text(text: str) -> str | None:
+    """Infer collection position from customer wording (rules)."""
+    low = (text or "").lower()
+    needs_dismantling = bool(re.search(r"\bdismantl", low)) and not bool(
+        re.search(r"\bno\s+dismantl", low)
+    )
+    if re.search(
+        r"\bno\s+(?:special\s+)?access\s+(?:restrictions?|issues?|problems?)\b|"
+        r"\b(?:unrestricted|easy)\s+access\b|"
+        r"\bno\s+(?:inside\s+)?access\s+(?:needed|required)\b|"
+        r"\b(?:outside only|from outside|outside the property|left outside|kerbside)\b|"
+        r"\b(?:on|in) (?:the )?(?:drive(?:way)?|drive way)\b|"
+        r"\bin the garden\b|\bfront garden\b|\brear garden\b",
+        low,
+    ):
+        return _POSITION_OUTSIDE
+    if re.search(
+        r"\b(?:inside the (?:property|house|flat|premises)|from inside|"
+        r"in the house|in the flat|in the property|inside collection)\b|"
+        r"\b(?:\d+(?:st|nd|rd|th)|first|second|ground)\s+floor\b|"
+        r"\b(?:flat|maisonette|apartment)\b",
+        low,
+    ):
+        if needs_dismantling:
+            return _POSITION_INSIDE_DISMANTLING
+        return _POSITION_INSIDE
+    if needs_dismantling:
+        return _POSITION_INSIDE_DISMANTLING
+    return None
+
+
+def _merge_position(
+    rule_position: str | None,
+    llm_position: str | None,
+) -> str:
+    """Prefer LLM when present; else rules; default Outside."""
+    return llm_position or rule_position or _POSITION_OUTSIDE
+
+
+def _apply_position_to_items(
+    items: list[dict[str, Any]],
+    position: str,
+) -> list[dict[str, Any]]:
+    """Attach position to each item; keep per-item client value when already set."""
+    out: list[dict[str, Any]] = []
+    for entry in items:
+        if not isinstance(entry, dict):
+            continue
+        existing = _normalize_position(entry.get("position"))
+        out.append({**entry, "position": existing or position})
+    return out
+
+
+def normalize_client_order_items(items: list[Any] | None) -> list[dict[str, Any]]:
+    """
+    Map frontend quote items into order items.
+    Does not invent items — only normalizes what the client sent.
+    """
+    raw: list[dict[str, Any]] = []
+    client_status: list[str | None] = []
+
+    for row in items or []:
+        if isinstance(row, str) and row.strip():
+            raw.append({"phrase": row.strip(), "quantity": 1})
+            client_status.append(None)
+            continue
+        if not isinstance(row, dict):
+            continue
+        phrase = str(
+            row.get("phrase")
+            or row.get("item_name")
+            or row.get("itemName")
+            or row.get("name")
+            or row.get("item")
+            or ""
+        ).strip()
+        if not phrase:
+            continue
+        try:
+            qty = max(1, int(row.get("quantity") or row.get("qty") or row.get("count") or 1))
+        except (TypeError, ValueError):
+            qty = 1
+        entry: dict[str, Any] = {"phrase": phrase, "quantity": qty}
+        if row.get("item_id") is not None:
+            entry["item_id"] = str(row.get("item_id"))
+        if row.get("item_name"):
+            entry["item_name"] = str(row.get("item_name"))
+        for key in ("price", "inside", "inside_with_dismantling", "final_price"):
+            if row.get(key) is not None:
+                entry[key] = row[key]
+        pos = _normalize_position(row.get("position") or row.get("collection_side"))
+        if pos:
+            entry["position"] = pos
+        raw.append(entry)
+
+        status_hint = row.get("status") or row.get("type")
+        if isinstance(status_hint, str) and status_hint.strip():
+            hint = status_hint.strip().lower()
+            if hint in ("standard", "standard_item"):
+                client_status.append("standard_item")
+            elif hint == "custom":
+                client_status.append("custom")
+            else:
+                client_status.append(hint)
+        else:
+            client_status.append(None)
+
+    enriched = enrich_order_items(raw)
+    out: list[dict[str, Any]] = []
+    for i, entry in enumerate(enriched):
+        src = raw[i] if i < len(raw) else {}
+        if i < len(client_status) and client_status[i]:
+            entry = {**entry, "status": client_status[i]}
+        if src.get("item_name") and not entry.get("item_name"):
+            entry["item_name"] = src["item_name"]
+        if src.get("item_id") is not None and not entry.get("item_id"):
+            entry["item_id"] = str(src["item_id"])
+        for key in ("price", "inside", "inside_with_dismantling", "final_price"):
+            if src.get(key) is not None:
+                entry[key] = src[key]
+        if src.get("position"):
+            entry["position"] = src["position"]
+        out.append(entry)
+    return out
 
 
 def _merge_booking_schedule(
@@ -333,7 +480,10 @@ def llm_extract_customer_from_conversation(
     prompt = f"""You extract structured booking details from a UK waste-collection email thread.
 
 Read the ENTIRE conversation below (oldest message first). Merge information from every relevant message.
-The customer may send details across several emails (address in one, phone in another, items in a third).
+The customer may send details across several emails (address in one, phone in another).
+
+IMPORTANT: Do NOT extract or invent a list of items to collect. Items are provided separately by the client.
+Omit "items" from your JSON (or set "items": []).
 
 Return ONLY JSON:
 {{
@@ -345,13 +495,11 @@ Return ONLY JSON:
     "postcode": "UK postcode e.g. SW9 9LN or null",
     "address": "full street collection address or null"
   }},
-  "items": [
-    {{"phrase": "dining chair", "quantity": 2}},
-    {{"phrase": "toilet cistern", "quantity": 1}}
-  ],
+  "items": [],
   "bookingDate": "YYYY-MM-DD collection date the customer chose, or null",
   "bookingTimeSlot": "AnyTime | 7am-12pm | 12pm-5pm — slot they confirmed, or null",
-  "customerNote": "string or null — short note of what they need collected and any special requests"
+  "customerNote": "string or null — short note of what they need collected and any special requests",
+  "position": "Outside | Inside | Inside with dismantling — where items are collected from, or null"
 }}
 
 Rules:
@@ -361,14 +509,18 @@ Rules:
 - Parse names from email signatures (e.g. "Victoria Lucas Gallery Assistant") or form fields (First Name / Last Name).
 - The email subject "New Quotation Request from First Last" is a reliable source for firstName and lastName.
 - Parse addresses even if informal ("Atherfold rd SW99LN", "28 central ave hounslow Tw32qh").
-- items = physical waste, furniture, or materials to collect mentioned anywhere in the thread.
-- If photos are mentioned but items are not listed, leave items as [].
+- Always leave items as [] — never invent or list collectible items.
 - Do not invent data; use null when unknown.
 - UK postcodes: normalize with a space before the last 3 characters when possible (SW99LN → SW9 9LN).
 - Phone: strip spaces and formatting; keep leading 0.
 - bookingDate / bookingTimeSlot: merge from the whole thread — date may be in an earlier
   message (e.g. "18 June morning") and the slot in a later one (e.g. "7am-12pm would be fine").
 - Map morning → 7am-12pm, afternoon/evening → 12pm-5pm, any time → AnyTime.
+- position: where the crew collects the items.
+  - "Outside" = left outside, kerbside, driveway, garden, no inside access needed.
+  - "Inside" = inside the property / house / flat / upstairs, without dismantling.
+  - "Inside with dismantling" = inside AND the customer mentions dismantling / taking apart.
+  Use null only if the thread gives no access/location clue at all.
 - customerNote: summarise what the customer wants collected (usually from their FIRST email)
   and any special instructions from early messages (e.g. "everything will be left outside",
   "please don't make noise", "need it gone urgently"). One or two sentences, British English.
@@ -382,8 +534,9 @@ CONVERSATION:
     try:
         raw = llm_chat(
             system=(
-                "You read UK waste-collection email threads and extract customer contact "
-                "details and items to collect. Output only valid JSON. British English."
+                "You read UK waste-collection email threads and extract customer contact, "
+                "booking details, and collection position only. Never invent an items list. "
+                "Output only valid JSON. British English."
             ),
             user=prompt,
             temperature=0.1,
@@ -404,14 +557,18 @@ def extract_customer_from_conversation(
     content_main: str,
     from_header: str = "",
     subject: str = "",
+    items: list[Any] | None = None,
 ) -> dict[str, Any]:
-    """Pure LLM extraction — no rule-based fallback."""
+    """LLM extraction for customer/booking; items come from the frontend."""
     customer_bodies = _customer_inbound_bodies(thread, content_main, from_header)
     rule_schedule = resolve_customer_booking_schedule(customer_bodies)
+    thread_text = "\n\n".join(customer_bodies) if customer_bodies else (content_main or "")
+    rule_position = _position_from_text(thread_text)
     thread_summary = _format_thread_for_llm(thread, content_main, from_header)
     llm_result, llm_error = llm_extract_customer_from_conversation(
         thread_summary=thread_summary,
     )
+    provided_items = normalize_client_order_items(items)
 
     if llm_result:
         llm_schedule = {
@@ -426,9 +583,11 @@ def extract_customer_from_conversation(
             from_header=from_header,
             subject=subject,
         )
+        position = _merge_position(rule_position, llm_result.get("position"))
         return {
             "customer": customer,
-            "items": enrich_order_items(llm_result["items"]),
+            "items": _apply_position_to_items(provided_items, position),
+            "position": position,
             "bookingDate": booking.get("bookingDate"),
             "bookingTimeSlot": booking.get("bookingTimeSlot"),
             "customerNote": llm_result.get("customerNote"),
@@ -437,9 +596,11 @@ def extract_customer_from_conversation(
             "subject": subject or None,
         }
 
+    position = _merge_position(rule_position, None)
     return {
         "customer": _empty_customer(),
-        "items": [],
+        "items": _apply_position_to_items(provided_items, position),
+        "position": position,
         "bookingDate": rule_schedule.get("bookingDate"),
         "bookingTimeSlot": rule_schedule.get("bookingTimeSlot"),
         "customerNote": _fallback_customer_note(customer_bodies),
