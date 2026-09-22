@@ -793,12 +793,29 @@ def _pick_main_category_item(
 
     e.g. "smaller bins" → head "bin" → prefer "Bin" / "Household Wheelie Bin"
     over "1100 Litre Bin" when the phrase has no litre size.
+
+    Prefer SKUs that share the customer's other words
+    (cardboard + box → Cardboard Box, not Sky Box).
     """
     head_n = _singularize(_normalize(head))
     if not head_n or not items:
         return None
     phrase_low = _normalize(phrase)
     phrase_has_digits = bool(re.search(r"\d", phrase_low))
+    customer_words = _customer_words_for_match(phrase)
+
+    def _word_in_name(word: str, name_norm: str) -> bool:
+        blob = f" {name_norm} "
+        if re.search(rf"\b{re.escape(word)}\b", blob):
+            return True
+        sing = _singularize(word)
+        if sing != word and re.search(rf"\b{re.escape(sing)}\b", blob):
+            return True
+        if word.endswith("s") and len(word) > 3:
+            stem = word[:-1]
+            if stem != sing and re.search(rf"\b{re.escape(stem)}\b", blob):
+                return True
+        return False
 
     scored: list[tuple[float, dict[str, Any]]] = []
     for it in items:
@@ -835,6 +852,24 @@ def _pick_main_category_item(
                     score += 90
                 elif len(dig) >= 2 and dig in n:
                     score += 40
+
+        # Prefer SKUs that share the customer's full wording (cardboard boxes → Cardboard Box)
+        shared = 0
+        missing_descriptors = 0
+        for w in customer_words:
+            sing = _singularize(w)
+            is_head = sing == head_n or w == head_n
+            if _word_in_name(w, n):
+                shared += 1
+                score += 25 if is_head else 90
+            elif not is_head:
+                missing_descriptors += 1
+                score -= 70
+
+        # Multi-word customer phrase with no shared descriptors → weak head-only match
+        if len(customer_words) >= 2 and shared <= 1 and missing_descriptors:
+            score -= 50
+
         score += _score_match(head_n, n) * 0.15
         scored.append((score, it))
 

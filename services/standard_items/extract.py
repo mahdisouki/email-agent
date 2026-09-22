@@ -91,35 +91,52 @@ def llm_extract_items(content_main: str) -> tuple[list[dict[str, Any]], str | No
     if not is_llm_suggest_enabled():
         return [], "LLM disabled (set OLLAMA_GENERATE_URL and USE_LLM_SUGGEST=true)"
 
+    from services.standard_items.common import _catalogue_category_names
+
+    category_hint = ", ".join(_catalogue_category_names()[:80])
+    category_block = (
+        f"\nCommon catalogue categories (for grounding only — still use the customer's words): "
+        f"{category_hint}\n"
+        if category_hint
+        else ""
+    )
+
     system = (
-        "You extract collectible waste/furniture items for UK pricing. "
+        "You extract collectible waste/furniture/appliance items for UK pricing. "
+        "Customers write like humans — full sentences, commas, 'and', or spaces. "
+        "A single item in a sentence still counts. Quantities like '1 x' are optional. "
         "Your entire reply MUST be a JSON array starting with [ and ending with ]. "
         "Never reply with {}, never wrap in an object. No markdown, no commentary."
     )
 
     prompt = f"""From this customer message, list every distinct thing they want collected or disposed of.
 
-Customers write freely — no standard layout. You must read quantities carefully.
-
+Customers write freely. Quantities (1 x, 2x) are OPTIONAL — default quantity 1.
+{category_block}
 Rules:
-1. Output ONLY a JSON array. Example shape:
+1. Output ONLY a JSON array:
    [{{"phrase": "CRT TV", "quantity": 1}}, {{"phrase": "garden waste bags", "quantity": 17}}]
-2. Never return {{}} or {{"items": ...}}. Always a top-level array: [...] or [] if nothing.
-3. One row per distinct item group. quantity MUST match the number in the message.
-   Examples:
-   - "2 1100 litre rubbish bins and 9 smaller bins" →
-     [{{"phrase": "1100 litre rubbish bins", "quantity": 2}}, {{"phrase": "smaller bins", "quantity": 9}}]
-   - "CRT 26 inch TV, LCD 26 inch TV, spin dryer, 17 bags of garden waste" →
-     [{{"phrase": "CRT TV", "quantity": 1}}, {{"phrase": "LCD TV", "quantity": 1}}, {{"phrase": "spin dryer", "quantity": 1}}, {{"phrase": "garden waste bags", "quantity": 17}}]
-   - "sofa and a double mattress" →
-     [{{"phrase": "sofa", "quantity": 1}}, {{"phrase": "double mattress", "quantity": 1}}]
-   - Subject/context is paint and body is "4x 10L 17x 5L 13x 2.5L 11x 1L" →
-     [{{"phrase": "10 litre paint cans", "quantity": 4}}, {{"phrase": "5 litre paint cans", "quantity": 17}}, {{"phrase": "2.5 litre paint cans", "quantity": 13}}, {{"phrase": "1 litre paint cans", "quantity": 11}}]
-4. Keep useful size/type words (CRT, LCD, 1100 litre, double, garden, paint, etc.).
-5. Include TVs, monitors, bins, bags, dryers, furniture, appliances, rubble, paint cans, etc.
-6. Do NOT invent items not in the message. If only sizes like "10L" appear but the message is about paint, label them as paint cans of that size.
-7. Do NOT include greetings, names, phones, addresses, or questions.
-8. If nothing to collect, return [] (empty array).
+2. Never return {{}} or {{"items": ...}}. Always a top-level array: [...] .
+3. One row per distinct physical item. If no number is given, use quantity 1.
+4. Single-sentence requests count. Examples:
+   - "I wish to dispose of an electric cooker" →
+     [{{"phrase": "electric cooker", "quantity": 1}}]
+   - "Please remove my old fridge" →
+     [{{"phrase": "fridge", "quantity": 1}}]
+   - "Need a sofa collected" →
+     [{{"phrase": "sofa", "quantity": 1}}]
+5. Split lists whatever the punctuation:
+   - "Cardboard boxes, garden trellises and an old garden gate"
+   - "cardboard boxes garden trellises garden gate"
+   - "1 x Double mattress 2 x office chairs"
+6. Keep useful type words (electric, double, garden, cardboard, CRT, …).
+   Use the customer's everyday words — do NOT invent exact catalogue SKU names.
+7. Include appliances (cooker, oven, fridge, washing machine), furniture, garden items,
+   cardboard, gates, TVs, bins, bags, rubble, paint, etc.
+8. Do NOT invent items not in the message.
+9. Do NOT include greetings, names, phones, addresses, form labels, or questions.
+10. Return [] ONLY if there is truly nothing physical to collect.
+    If the message mentions any object to remove/dispose/collect/quote, you MUST list it.
 
 Customer message:
 {text[:6000]}"""
@@ -147,13 +164,14 @@ Customer message:
         temperature: float,
         retry_hint: str = "",
         json_mode: bool = True,
+        user_override: str | None = None,
     ) -> tuple[list[dict[str, Any]], str | None, str]:
-        user = prompt
-        if retry_hint:
+        user = user_override or prompt
+        if retry_hint and not user_override:
             user = (
                 f"{prompt}\n\n{retry_hint}\n"
                 "Reply with ONLY a JSON array like "
-                '[{"phrase":"garden waste bags","quantity":17}].'
+                '[{"phrase":"electric cooker","quantity":1}].'
             )
         try:
             raw = llm_chat(
@@ -183,27 +201,48 @@ Customer message:
                 "You previously returned a JSON object {}. That is WRONG. "
                 "You MUST return a JSON array starting with [ ."
             )
-        retry_items, retry_err, raw2 = _call(
+        retry_items, retry_err, _ = _call(
             temperature=0.0,
             retry_hint=(
                 f"{object_hint} "
                 "IMPORTANT: previous answer was empty or invalid. "
-                "List every TV, monitor, stand, dryer, bag, bin, sofa, mattress mentioned. "
-                "Use the numbers from the message (e.g. 17 bags)."
+                "The message almost certainly names something to collect. "
+                "Even ONE item in a full sentence counts "
+                '(e.g. "I wish to dispose of an electric cooker" → '
+                '[{"phrase":"electric cooker","quantity":1}]). '
+                "Split every distinct collectible thing into its own row. "
+                "If no number is written, use quantity 1."
             ).strip(),
         )
         if retry_items:
             items, err = retry_items, None
         else:
+            # Focused recovery: short prompt, hard requirement not to return []
+            recovery = (
+                "Extract collectible items from this UK waste-collection message.\n"
+                "Return ONLY a JSON array of {\"phrase\",\"quantity\"}.\n"
+                "Single sentences count. Example: "
+                '"I wish to dispose of an electric cooker" → '
+                '[{"phrase":"electric cooker","quantity":1}]\n'
+                "Do NOT return []. If anything physical is mentioned, list it.\n"
+                f"{category_block}\n"
+                f"Message:\n{text[:4000]}"
+            )
             retry2_items, retry2_err, _ = _call(
                 temperature=0.0,
-                json_mode=False,
-                retry_hint=(
-                    "FINAL ATTEMPT. Output nothing except a JSON array. "
-                    "Start with [ end with ]. Example: "
-                    '[{"phrase":"CRT TV","quantity":1},{"phrase":"garden waste bags","quantity":17}]'
-                ),
+                json_mode=True,
+                user_override=recovery,
             )
+            if not retry2_items:
+                retry2_items, retry2_err, _ = _call(
+                    temperature=0.0,
+                    json_mode=False,
+                    user_override=(
+                        recovery
+                        + "\n\nFINAL: start with [ end with ]. "
+                        'Example: [{"phrase":"electric cooker","quantity":1}]'
+                    ),
+                )
             if retry2_items:
                 items, err = retry2_items, None
             else:
@@ -221,7 +260,6 @@ Customer message:
         if missed:
             items = _merge_extracted_item_lists(items, missed)
         elif miss_err and not err:
-            # keep primary items; optional note is not fatal
             pass
 
     return items, err
@@ -235,7 +273,18 @@ def _message_may_have_multiple_item_groups(text: str) -> bool:
     # trigger when 2+ distinct quantity-ish numbers OR "and" between item phrases.
     if len(qty_nums) >= 2:
         return True
-    if re.search(r"\band\b.+\b(bins?|bags?|tvs?|sofas?|mattress|chairs?|doors?)\b", low):
+    if re.search(
+        r"\band\b.+\b(bins?|bags?|tvs?|sofas?|mattress|chairs?|doors?|"
+        r"boxes?|gates?|trellis(?:es)?|tables?|furniture|cardboard|garden)\b",
+        low,
+    ):
+        return True
+    # Comma-separated item list without quantities
+    if "," in low and re.search(
+        r"\b(boxes?|gates?|trellis|sofa|mattress|chair|table|bin|bag|"
+        r"cardboard|garden|door|fridge|wardrobe)\b",
+        low,
+    ):
         return True
     return False
 
@@ -360,78 +409,10 @@ def _looks_like_waste_item(phrase: str) -> bool:
         "tile", "board", "appliance", "furniture", "bed", "carpet", "pram",
         "suitcase", "boiler", "sink", "toilet", "bath", "tv", "television",
         "monitor", "crt", "lcd", "dryer", "spin", "garden", "stand",
+        "cooker", "oven", "hob", "washer", "dishwasher", "microwave",
+        "cardboard", "gate", "trellis", "fence", "paint",
     )
     return any(n in low for n in needles)
-
-
-def _message_has_written_item_list(text: str) -> bool:
-    """
-    Soft gate only: customer wrote an item list / quantities in free text.
-    Used so vision detectedItems do not override a successful LLM extraction.
-    """
-    low = (text or "").lower()
-    if len(low) < 20:
-        return False
-    has_qty = bool(re.search(r"\b\d+\s*[x×]?\s*[a-z]", low))
-    has_noun = bool(
-        re.search(
-            r"\b(bins?|bags?|sofas?|mattress(?:es)?|fridges?|doors?|chairs?|"
-            r"tables?|rubbish|waste|rubble|tiles?|wardrobe|furniture|appliance|"
-            r"tvs?|televisions?|monitors?|crt|lcd|dryers?|garden)\b",
-            low,
-        )
-    )
-    written_intent = any(
-        x in low
-        for x in (
-            "we have",
-            "i have",
-            "these items",
-            "need to dispose",
-            "need collecting",
-            "to be collected",
-            "to collect",
-            "want rid",
-            "quote for",
-            "dispose of",
-            "would like to be collected",
-        )
-    )
-    return bool((has_qty and has_noun) or (written_intent and has_noun))
-
-
-_REGEX_ITEM_SPECS: list[tuple[re.Pattern[str], str]] = [
-    (re.compile(r"\b\d+[- ]?seater\s+sofa\b", re.I), "2 seater sofa"),
-    (re.compile(r"\bsofa\s+bed\b", re.I), "sofa bed"),
-    (re.compile(r"\bcorner\s+sofa\b", re.I), "corner sofa"),
-    (re.compile(r"\bsofa\b", re.I), "sofa"),
-    (re.compile(r"\b(?:double|single|king|super\s+king)\s+mattress\b", re.I), "mattress"),
-    (re.compile(r"\bmattress\b", re.I), "mattress"),
-    (re.compile(r"\bfridge\b|\brefrigerator\b", re.I), "fridge"),
-    (re.compile(r"\bfreezer\b", re.I), "freezer"),
-    (re.compile(r"\bwashing\s+machine\b", re.I), "washing machine"),
-    (re.compile(r"\bwardrobe\b", re.I), "wardrobe"),
-    (re.compile(r"\bbed\s+frame\b", re.I), "bed frame"),
-    (re.compile(r"\barmchair\b", re.I), "armchair"),
-    (re.compile(r"\bchair\b", re.I), "chair"),
-]
-
-
-def _regex_extract_items_fallback(content_main: str) -> list[dict[str, Any]]:
-    """Rule-based item list when LLM extraction is empty (common furniture phrases)."""
-    text = prepare_content_main(content_main)
-    if not text:
-        return []
-    seen: set[str] = set()
-    items: list[dict[str, Any]] = []
-    for pattern, phrase in _REGEX_ITEM_SPECS:
-        if pattern.search(text):
-            key = phrase.lower()
-            if key in seen:
-                continue
-            seen.add(key)
-            items.append({"phrase": phrase, "quantity": 1})
-    return items
 
 
 _PAINT_SIZE_QTY_RE = re.compile(

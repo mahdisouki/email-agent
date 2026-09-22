@@ -10,10 +10,10 @@ from services.standard_items.common import (
     _is_collectible_phrase,
     _main_catalogue_search_term,
 )
-from services.standard_items.extract import (
-    _message_has_written_item_list,
-    _regex_extract_items_fallback,
-    extract_items_with_paint_size_override,
+from services.standard_items.extract import extract_items_with_paint_size_override
+from services.standard_items.fallback import (
+    extract_items_fallback,
+    message_has_written_item_list,
 )
 from services.standard_items.text_prep import prepare_content_main
 
@@ -349,14 +349,24 @@ def lookup_prices_for_text(
         detected_items=detected_items,
     )
     llm_failed = bool(llm_error) or not llm_items
-    # Regex is furniture-only soft fallback — skip when the customer already wrote a freeform list
-    if not llm_items and not _message_has_written_item_list(prepared):
-        fallback_items = _regex_extract_items_fallback(content_main)
+    # When LLM returns nothing, always try freeform/regex fallback (quantities optional).
+    # message_has_written_item_list is for vision merge policy elsewhere — do not block fallback.
+    if not llm_items:
+        fallback_items = extract_items_fallback(content_main)
         if fallback_items:
             llm_items = fallback_items
-            extraction_method = "regex_fallback"
+            sources = {str(i.get("source") or "") for i in fallback_items}
+            if "nx_fallback" in sources:
+                extraction_method = "nx_fallback"
+            elif "freeform_fallback" in sources:
+                extraction_method = "freeform_fallback"
+            else:
+                extraction_method = "regex_fallback"
             llm_error = None
             llm_failed = False
+        elif message_has_written_item_list(prepared):
+            # Customer clearly listed items but we still have nothing — keep llm_error for logs
+            pass
 
     # Paint size list is authoritative — do not merge vision counts (often under-counted)
     if extraction_method != "paint_size_list":

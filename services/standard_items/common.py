@@ -1,9 +1,11 @@
 """Shared constants and string/match helpers for catalogue pricing."""
 from __future__ import annotations
 
+import json
 import os
 import re
 import unicodedata
+from functools import lru_cache
 from typing import Any
 
 from dotenv import load_dotenv
@@ -18,6 +20,21 @@ _CATEGORY_CATALOGUE_PATH = os.path.join(
     os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))),
     "exportStandardItemsByCategory.json",
 )
+
+
+@lru_cache(maxsize=1)
+def _catalogue_category_names() -> tuple[str, ...]:
+    """Export category keys for LLM grounding (not a full SKU list)."""
+    try:
+        with open(_CATEGORY_CATALOGUE_PATH, encoding="utf-8") as f:
+            data = json.load(f)
+    except (OSError, json.JSONDecodeError, TypeError):
+        return ()
+    if not isinstance(data, dict):
+        return ()
+    names = [str(k).strip() for k in data.keys() if str(k).strip()]
+    return tuple(sorted(names))
+
 
 _FILLER_WORDS = frozenset(
     {"some", "any", "the", "a", "an", "of", "from", "with", "for", "and", "my", "your", "please"}
@@ -110,10 +127,18 @@ def _pick_best(
         score = _score_match(search, name)
         n_norm = _normalize(name)
         for w in customer_words:
+            sing = _singularize(w)
             if re.search(rf"\b{re.escape(w)}\b", f" {n_norm} "):
-                score += 12.0
-            elif w.endswith("s") and re.search(rf"\b{re.escape(w[:-1])}\b", f" {n_norm} "):
-                score += 12.0
+                score += 40.0
+            elif sing != w and re.search(rf"\b{re.escape(sing)}\b", f" {n_norm} "):
+                score += 40.0
+            elif w.endswith("s") and len(w) > 3 and re.search(
+                rf"\b{re.escape(w[:-1])}\b", f" {n_norm} "
+            ):
+                score += 40.0
+            else:
+                # Customer said an extra word the SKU lacks (cardboard vs Sky Box)
+                score -= 25.0
         return score
 
     if len(items) == 1:
@@ -156,6 +181,9 @@ def _singularize(word: str) -> str:
         return w
     if w.endswith("ies") and len(w) > 4:
         return w[:-3] + "y"
+    # boxes → box, watches → watch, dishes → dish, buzzes → buzz
+    if w.endswith(("xes", "ches", "shes", "zes")) and len(w) > 4:
+        return w[:-2]
     if w.endswith("ses") and len(w) > 4:
         return w[:-2]
     if w.endswith("s") and not w.endswith("ss"):
@@ -231,7 +259,7 @@ def _main_catalogue_search_term(phrase: str) -> str:
 
 
 def _phrase_matches_catalogue(customer_phrase: str, item_name: str) -> bool:
-    """True only when the customer's item description matches the catalogue itemName."""
+    """True when the customer's item words match the catalogue itemName."""
     cw = _customer_words_for_match(customer_phrase)
     if not cw:
         return False
@@ -250,10 +278,24 @@ def _phrase_matches_catalogue(customer_phrase: str, item_name: str) -> bool:
     def _word_in_catalogue(word: str) -> bool:
         if re.search(rf"\b{re.escape(word)}\b", n_blob):
             return True
+        sing = _singularize(word)
+        if sing != word and re.search(rf"\b{re.escape(sing)}\b", n_blob):
+            return True
         if word.endswith("s") and len(word) > 3:
-            return bool(re.search(rf"\b{re.escape(word[:-1])}\b", n_blob))
-        return bool(re.search(rf"\b{re.escape(_singularize(word))}\b", n_blob))
+            stem = word[:-1]
+            if stem != sing and re.search(rf"\b{re.escape(stem)}\b", n_blob):
+                return True
+        return False
 
+    # All customer words found in the catalogue name (e.g. cardboard boxes → Cardboard Box …)
+    if all(_word_in_catalogue(w) for w in cw):
+        return True
+    # Multi-word: head noun + most descriptors (tolerate one missing filler word)
+    if len(cw) >= 2 and _word_in_catalogue(cw[-1]):
+        matched = sum(1 for w in cw if _word_in_catalogue(w))
+        if matched >= len(cw) - 1:
+            return True
+    return False
 
 
 def _is_collectible_phrase(phrase: str) -> bool:

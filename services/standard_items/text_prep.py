@@ -3,17 +3,32 @@ from __future__ import annotations
 
 import re
 
-def _comments_from_form(text: str) -> str:
+
+def _body_from_form_field(text: str, field: str) -> str:
+    """Pull Comments: / Message: body from LWM form notifications."""
     m = re.search(
-        r"Comments:\s*(.+?)(?=\s+Uploaded Items\b|\s+Thank you for using|$)",
+        rf"{re.escape(field)}:\s*(.+?)(?="
+        r"\s+Uploaded Items\b|"
+        r"\s+Submitted:|"
+        r"\s+Thank you for using\b|"
+        r"\s+London Waste Management\s*$|"
+        r"$)",
         text,
         re.I | re.S,
     )
     return m.group(1).strip() if m else ""
 
 
+def _customer_body_from_form(text: str) -> str:
+    """
+    Quotation forms use Comments:; contact forms use Message:.
+    Prefer Comments, then Message.
+    """
+    return _body_from_form_field(text, "Comments") or _body_from_form_field(text, "Message")
+
+
 def prepare_content_main(content_main: str) -> str:
-    """Use customer wording from contentMain; prefer Comments on quotation forms.
+    """Use customer wording from contentMain; prefer Comments/Message on LWM forms.
 
     Prefer text above any quoted LWM email so item lists stay clean for the LLM.
     """
@@ -21,8 +36,8 @@ def prepare_content_main(content_main: str) -> str:
     if not text:
         return ""
     low = text.lower()
-    if "first name:" in low and "comments:" in low:
-        text = _comments_from_form(text) or text
+    if "first name:" in low and ("comments:" in low or "message:" in low):
+        text = _customer_body_from_form(text) or text
     # Drop quoted outbound LWM / reply history after the customer's own message
     text = re.split(
         r"\bFrom:\s*[\"']?London Waste Management\b|"
@@ -37,5 +52,3 @@ def prepare_content_main(content_main: str) -> str:
     )[0].strip()
     text = re.sub(r"\b\d+\s+photos?\s+have\s+been\s+sent\.?\s*$", "", text, flags=re.I).strip()
     return text.strip()
-
-
